@@ -1,0 +1,61 @@
+---
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>O·R·G — Sidecar</title>
+		<style>
+			:root {
+				--bg: #0f1611;
+				--fg: #ece6d6;
+				--accent: #cdaa5c;
+			}
+			@media (prefers-color-scheme: light) {
+				:root {
+					--bg: #f7f4ee;
+					--fg: #16201a;
+					--accent: #8a6d2f;
+				}
+			}
+			body {
+				background: var(--bg);
+				color: var(--fg);
+				font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+				max-width: 40rem;
+				margin: 4rem auto;
+				padding: 0 1.5rem;
+				line-height: 1.6;
+			}
+			h1 { letter-spacing: 0.04em; }
+			a { color: var(--accent); }
+			.badge {
+				display: inline-block;
+				font-size: 0.75rem;
+				text-transform: uppercase;
+				letter-spacing: 0.08em;
+				color: var(--accent);
+				margin-bottom: 0.5rem;
+			}
+		</style>
+	</head>
+	<body>
+		<p class="badge">Sidecar</p>
+		<h1>O·R·G</h1>
+		<p>
+			Sidecar site for
+			<a href="https://github.com/drasticstatic/O-R-G-dapp">O-R-G-dapp</a>
+			— the Octagon Research Group and Spirituality Centers dApp. This site
+			will publish two things the main app repo doesn't:
+		</p>
+		<ul>
+			<li>Changelog-as-content — the project's changelog rendered as a public, browsable site.</li>
+			<li>A scrubbed structure map — module relationships only, no source snippets.</li>
+		</ul>
+		<p>Neither is populated yet — this is the initial scaffold only.</p>
+	</body>
+</html>
