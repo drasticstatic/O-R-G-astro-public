@@ -26,6 +26,14 @@ Spirituality Centers). It publishes two things the main dApp repo doesn't:
 
 Neither is populated yet — this repo currently holds the initial site scaffold only.
 
+**Breadcrumb, 2026-09-23:** when this gets finished, use
+[`my-template/changelog-template/`](https://github.com/drasticstatic/my-template/tree/main/changelog-template)
+rather than building the changelog-as-content pages from scratch — it's the same Astro
+content-collection pattern this repo already anticipated, now proven out as PIR's and THEF's
+`changelog-astro`/`changelog-astro-public` pairs. Public repo target stays `drasticstatic`-owned
+(this is a personal project, not a community-owned org, per the template README's org-vs-personal
+split), same as today.
+
 ## 🔒 Private / Public Split
 
 This repo is **private** and is the source of truth. A public sibling,
