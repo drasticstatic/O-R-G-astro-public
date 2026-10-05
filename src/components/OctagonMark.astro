@@ -1,0 +1,16 @@
+---
+// The ORG logo's eight wedge colors, clockwise from the top edge.
+const WEDGES = ["#5a43f0", "#9a4dff", "#d04ce8", "#e65aa8", "#f29a3a", "#e4d548", "#6fd84a", "#3ccfe0"];
+const { size = 28 } = Astro.props;
+const v = (r: number, k: number) => {
+  const a = ((-112.5 + 45 * k) * Math.PI) / 180;
+  return [50 + r * Math.cos(a), 50 + r * Math.sin(a)];
+};
+const pts = (r: number) => Array.from({ length: 8 }, (_, k) => v(r, k).map((n) => n.toFixed(2)).join(",")).join(" ");
+---
+<svg width={size} height={size} viewBox="0 0 100 100" aria-hidden="true">
+  {WEDGES.map((c, k) => <polygon points={`50,50 ${v(46, k).join(",")} ${v(46, k + 1).join(",")}`} fill={c} />)}
+  <polygon points={pts(46)} fill="none" stroke="var(--frame)" stroke-width="5" stroke-linejoin="round" />
+  {Array.from({ length: 8 }, (_, k) => <line x1="50" y1="50" x2={v(46, k)[0]} y2={v(46, k)[1]} stroke="var(--frame)" stroke-width="3" />)}
+  <circle cx="50" cy="50" r="9" fill="#fff" />
+</svg>
