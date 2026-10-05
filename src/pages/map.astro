@@ -1,0 +1,138 @@
+---
+import Base from "../layouts/Base.astro";
+
+type Node = { id: string; x: number; y: number; name: string; line: string; href?: string; private?: boolean };
+
+const W = 300;
+const H = 66;
+const GH = "https://github.com/";
+const ORGH = `${GH}Octagon-Religious-Research-Group-ORG/`;
+
+const nodes: Node[] = [
+  { id: "fe", x: 40, y: 110, name: "org-frontend", line: "The live site's code, in TanStack Start", href: `${ORGH}org-frontend` },
+  { id: "be", x: 40, y: 230, name: "org-backend", line: "API for offerings and editable pages", href: `${ORGH}org-backend` },
+  { id: "prof", x: 40, y: 360, name: ".github", line: "The organization's public profile", href: `${ORGH}.github` },
+  { id: "brand", x: 40, y: 470, name: "brand-assets", line: "Logo, avatar, and favicons", href: `${ORGH}brand-assets` },
+  { id: "root", x: 40, y: 560, name: "…ORG.github.io", line: "The organization's root page", href: `${ORGH}Octagon-Religious-Research-Group-ORG.github.io` },
+
+  { id: "live", x: 420, y: 110, name: "orgspirituality.org", line: "Hosted on Netlify", href: "https://orgspirituality.org" },
+  { id: "api", x: 420, y: 230, name: "ORG API", line: "Hosted on Heroku" },
+  { id: "rootpage", x: 420, y: 560, name: "Org root page", line: "Hosted on GitHub Pages", href: "https://octagon-religious-research-group-org.github.io/" },
+
+  { id: "dapp", x: 800, y: 110, name: "O-R-G-dapp", line: "Private source for the dApp preview", private: true },
+  { id: "dapppub", x: 800, y: 230, name: "dApp preview", line: "Public copy, on GitHub Pages", href: "https://drasticstatic.github.io/O-R-G-dapp-public-preview/" },
+  { id: "astro", x: 800, y: 360, name: "O-R-G-astro", line: "Private source for this sidecar", private: true },
+  { id: "astropub", x: 800, y: 470, name: "This sidecar", line: "Public copy, on GitHub Pages", href: "https://drasticstatic.github.io/O-R-G-astro-public/" },
+  { id: "renan", x: 800, y: 590, name: "Design directions", line: "Renan's proposal, on Netlify", href: "https://org-new-look.netlify.app/" },
+];
+
+const by = Object.fromEntries(nodes.map((n) => [n.id, n]));
+const right = (n: Node) => [n.x + W, n.y + H / 2];
+const left = (n: Node) => [n.x, n.y + H / 2];
+const top = (n: Node) => [n.x + W / 2, n.y];
+const bottom = (n: Node) => [n.x + W / 2, n.y + H];
+
+type Edge = { d: string; label: string; lx: number; ly: number; soft?: boolean };
+const line = (a: number[], b: number[]) => `M${a[0]},${a[1]} L${b[0]},${b[1]}`;
+
+const edges: Edge[] = [
+  { d: line(right(by.fe), left(by.live)), label: "deploys", lx: 380, ly: 136 },
+  { d: line(right(by.be), left(by.api)), label: "deploys", lx: 380, ly: 256 },
+  { d: line(bottom(by.live), top(by.api)), label: "calls", lx: 585, ly: 204 },
+  { d: line(right(by.root), left(by.rootpage)), label: "serves", lx: 380, ly: 586 },
+  { d: line(bottom(by.dapp), top(by.dapppub)), label: "syncs public files", lx: 965, ly: 204 },
+  { d: line(bottom(by.astro), top(by.astropub)), label: "syncs public files", lx: 965, ly: 452 },
+  {
+    d: `M${by.fe.x + W - 40},${by.fe.y} C${by.fe.x + W - 40},30 ${by.dapp.x + W - 40},30 ${by.dapp.x + W - 40},${by.dapp.y}`,
+    label: "artwork and words, copied in",
+    lx: 590,
+    ly: 46,
+    soft: true,
+  },
+  { d: line(right(by.brand), left(by.astropub)), label: "favicons", lx: 585, ly: 496, soft: true },
+  { d: line(top(by.renan), bottom(by.astropub)), label: "three lights", lx: 965, ly: 566, soft: true },
+];
+
+const chamfer = (n: Node, c = 10) =>
+  [
+    [n.x + c, n.y], [n.x + W - c, n.y], [n.x + W, n.y + c], [n.x + W, n.y + H - c],
+    [n.x + W - c, n.y + H], [n.x + c, n.y + H], [n.x, n.y + H - c], [n.x, n.y + c],
+  ].map((p) => p.join(",")).join(" ");
+---
+<Base title="Map: ORG sidecar" description="How ORG's code, hosting, and previews connect.">
+  <header class="wrap"><div class="head">
+    <h1>Map</h1>
+    <p class="muted">
+      How ORG's repositories, hosting, and the previews connect. Solid lines carry code or traffic; dashed lines
+      show where one project borrows from another.
+    </p>
+  </div></header>
+
+  <div class="wrap">
+    <div class="scroller">
+      <svg viewBox="0 0 1140 700" role="img" aria-labelledby="map-title map-desc" class="map">
+        <title id="map-title">Map of ORG's sites and previews</title>
+        <desc id="map-desc">
+          ORG's organization holds org-frontend, deployed to orgspirituality.org on Netlify, and org-backend,
+          deployed as an API on Heroku that the site calls. The organization also holds its profile, brand assets,
+          and a root page on GitHub Pages. In drasticstatic's account, private sources for the dApp preview and this
+          sidecar each sync public files to a public copy served on GitHub Pages. The dApp preview copies artwork and
+          words from org-frontend, the sidecar uses the brand favicons, and both use the three lights from Renan's
+          design proposal.
+        </desc>
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" class="arrowhead" />
+          </marker>
+          <marker id="arrow-soft" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" class="arrowhead soft" />
+          </marker>
+        </defs>
+
+        <text x="40" y="92" class="col">ORG on GitHub</text>
+        <text x="420" y="92" class="col">Where it runs</text>
+        <text x="800" y="92" class="col">drasticstatic previews</text>
+
+        {edges.map((e) => (
+          <g class={e.soft ? "edge soft" : "edge"}>
+            <path d={e.d} fill="none" marker-end={e.soft ? "url(#arrow-soft)" : "url(#arrow)"} />
+            <text x={e.lx} y={e.ly} text-anchor="middle" class="edge-label">{e.label}</text>
+          </g>
+        ))}
+
+        {nodes.map((n) => {
+          const body = (
+            <g class={n.private ? "node private" : "node"}>
+              <polygon points={chamfer(n)} />
+              <text x={n.x + 18} y={n.y + 28} class="name">{n.name}{n.private ? " (private)" : ""}</text>
+              <text x={n.x + 18} y={n.y + 50} class="line">{n.line}</text>
+            </g>
+          );
+          return n.href ? <a href={n.href}>{body}</a> : body;
+        })}
+      </svg>
+    </div>
+  </div>
+</Base>
+
+<style>
+  .head { padding-block: 4rem 1.5rem; max-width: 48rem; }
+  .head h1 { font-size: clamp(2.6rem, 6vw, 4rem); }
+  .head p { margin-top: 1rem; font-size: 1.1rem; }
+  .scroller { overflow-x: auto; padding-bottom: 4rem; }
+  .map { min-width: 860px; width: 100%; height: auto; }
+  .col { font: 600 15px var(--font-body); fill: var(--muted); }
+  .node polygon { fill: var(--surface); stroke: var(--border); stroke-width: 1.5; }
+  .node.private polygon { stroke-dasharray: 5 4; }
+  a .node:hover polygon, a:focus-visible .node polygon { stroke: var(--accent); stroke-width: 2.5; }
+  .name { font-family: var(--font-heading); font-variation-settings: var(--heading-settings); font-size: 19px; fill: var(--heading); }
+  .line { font: 13.5px var(--font-body); fill: var(--muted); }
+  .edge path { stroke: var(--accent); stroke-width: 1.6; }
+  .edge.soft path { stroke: var(--muted); stroke-dasharray: 6 5; }
+  .arrowhead { fill: var(--accent); }
+  .arrowhead.soft { fill: var(--muted); }
+  .edge-label {
+    font: 12.5px var(--font-body); fill: var(--muted);
+    paint-order: stroke; stroke: var(--background); stroke-width: 6px; stroke-linejoin: round;
+  }
+</style>

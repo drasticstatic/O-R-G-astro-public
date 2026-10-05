@@ -1,0 +1,114 @@
+---
+import "../styles/org.css";
+import OctagonMark from "../components/OctagonMark.astro";
+import { url, DAPP, LIVE, PROPOSAL } from "../lib/url";
+
+const { title, description = "Changelog and structure map for ORG's sites." } = Astro.props;
+const here = Astro.url.pathname.replace(/\/$/, "");
+const nav = [
+  { href: url(""), label: "Overview" },
+  { href: url("changelog"), label: "Changelog" },
+  { href: url("map"), label: "Map" },
+];
+const lights = [
+  { id: "night", name: "Night Sanctuary", sw: "linear-gradient(100deg,#b39bff,#f08ccf,#6fe3d6,#f2c97f)" },
+  { id: "prism", name: "Prism Light", sw: "linear-gradient(100deg,#ffb3c7,#ffd9a0,#a8e3f5,#c9b8ff)" },
+  { id: "stone", name: "Stone & Lapis", sw: "linear-gradient(100deg,#22408a,#3d5ea8,#7d5a1c)" },
+  { id: "day", name: "Follow the day", sw: "linear-gradient(90deg,#c9b8ff 0 33.3%,#22408a 0 66.6%,#100e1c 0)" },
+];
+const prepaint = `(function(){var d=document.documentElement,s=null,e={light:"night",motion:"gentle"};
+try{s=localStorage.getItem("org-experience");}catch(x){}
+if(s){try{var p=JSON.parse(s);if(p.light)e.light=p.light;if(p.motion)e.motion=p.motion;}catch(x){}}
+else if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches){e.motion="still";}
+var h=new Date().getHours();var t=e.light==="day"?(h>=5&&h<11?"prism":h>=11&&h<17?"stone":"night"):e.light;
+d.dataset.light=e.light;d.dataset.theme=t;d.dataset.motion=e.motion;})();`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/png" sizes="32x32" href={url("favicon.png")} />
+    <link rel="apple-touch-icon" sizes="180x180" href={url("apple-touch-icon.png")} />
+    <script is:inline set:html={prepaint} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..600,0..100,0..1&family=Manrope:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Hanken+Grotesk:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,500&family=Marcellus&display=swap"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href={url("")}>
+          <OctagonMark size={30} />
+          <span class="display">ORG</span>
+          <small>Sidecar</small>
+        </a>
+        <nav class="site-nav" aria-label="Main">
+          {nav.map((n) => (
+            <a href={n.href} aria-current={n.href.replace(/\/$/, "") === here ? "page" : undefined}>{n.label}</a>
+          ))}
+          <a href={DAPP}>dApp preview</a>
+          <details class="exp">
+            <summary class="oct btn btn-quiet">Light and motion</summary>
+            <div class="exp-panel oct-card oct">
+              <div class="oct-inner oct">
+                <fieldset>
+                  <legend>Light</legend>
+                  <div class="choices">
+                    {lights.map((l) => (
+                      <label class="oct">
+                        <input type="radio" name="light" value={l.id} data-exp-light />
+                        <span class="sw emblem" style={`background:${l.sw}`}></span>
+                        {l.name}
+                      </label>
+                    ))}
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Motion</legend>
+                  <div class="choices row">
+                    {["still", "gentle", "vivid"].map((m) => (
+                      <label class="oct" style="justify-content:center">
+                        <input type="radio" name="motion" value={m} data-exp-motion />
+                        {m[0].toUpperCase() + m.slice(1)}
+                      </label>
+                    ))}
+                  </div>
+                </fieldset>
+                <p class="muted" style="font-size:.85rem">Shared with the dApp preview in this browser.</p>
+              </div>
+            </div>
+          </details>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          A preview of what ORG's sites could become. The official site is <a href={LIVE}>orgspirituality.org</a>,
+          and members vote on every change to it.
+        </p>
+        <p>
+          The three lights come from <a href={PROPOSAL}>Renan Teixeira's design proposal</a>. Built by
+          <a href="https://github.com/drasticstatic">drasticstatic</a> with
+          <a href="https://github.com/drasticstatic/anthropas-argus-alfred-public-preview">Alfred</a>.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      import { initExperience } from "../scripts/experience";
+      initExperience();
+    </script>
+  </body>
+</html>

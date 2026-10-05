@@ -1,0 +1,62 @@
+---
+import Base from "../layouts/Base.astro";
+import { CHANGELOG } from "../data/changelog";
+
+const month = (d: string) =>
+  new Date(`${d}T12:00:00`).toLocaleDateString("en-US", { month: "long", year: "numeric" });
+const day = (d: string) => new Date(`${d}T12:00:00`).toLocaleDateString("en-US", { month: "short", day: "numeric" });
+
+const groups: { month: string; entries: typeof CHANGELOG }[] = [];
+for (const e of CHANGELOG) {
+  const m = month(e.date);
+  const last = groups[groups.length - 1];
+  if (last && last.month === m) last.entries.push(e);
+  else groups.push({ month: m, entries: [e] });
+}
+---
+<Base title="Changelog: ORG sidecar" description="Every notable change to ORG's sites, newest first.">
+  <header class="wrap"><div class="head">
+    <h1>Changelog</h1>
+    <p class="muted">Every notable change to ORG's sites and previews, newest first. Each entry names who made it.</p>
+  </div></header>
+
+  <div class="wrap"><div class="timeline">
+    {groups.map((g) => (
+      <section>
+        <h2>{g.month}</h2>
+        <ol>
+          {g.entries.map((e) => (
+            <li>
+              <span class="node emblem" aria-hidden="true"></span>
+              <div class="meta muted">
+                <time datetime={e.date}>{day(e.date)}</time>
+                <span>{e.area}</span>
+              </div>
+              <h3>{e.link ? <a href={e.link}>{e.title}</a> : e.title}</h3>
+              <p>{e.detail}</p>
+              <p class="who muted">{e.who}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+    ))}
+  </div></div>
+</Base>
+
+<style>
+  .head { padding-block: 4rem 1rem; max-width: 48rem; }
+  .head h1 { font-size: clamp(2.6rem, 6vw, 4rem); }
+  .head p { margin-top: 1rem; font-size: 1.1rem; }
+  .timeline { padding-block: 1rem 5rem; max-width: 48rem; }
+  .timeline h2 { font-size: 1.6rem; margin: 2.5rem 0 1rem; }
+  .timeline ol { list-style: none; margin: 0; padding: 0 0 0 2rem; border-left: 1px solid var(--border); }
+  .timeline li { position: relative; padding: 0 0 2rem; }
+  .node { position: absolute; left: calc(-2rem - 8px); top: 0.3rem; width: 16px; height: 16px; background: var(--ink); }
+  .meta { display: flex; gap: 1rem; font-size: 0.88rem; }
+  .meta span::before { content: ""; display: inline-block; width: 0.35rem; height: 0.35rem; margin-right: 0.5rem; vertical-align: middle; background: var(--accent); }
+  .timeline h3 { font-size: 1.3rem; margin-top: 0.25rem; }
+  .timeline h3 a { color: var(--heading); text-decoration: none; }
+  .timeline h3 a:hover { color: var(--accent); text-decoration: underline; }
+  .timeline p { margin-top: 0.35rem; }
+  .who { font-size: 0.9rem; }
+</style>
