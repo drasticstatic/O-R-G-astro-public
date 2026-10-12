@@ -113,7 +113,7 @@ a { color: var(--accent); text-underline-offset: 0.18em; text-decoration-thickne
 /* Footer */
 .site-footer { margin-top: auto; border-top: 1px solid var(--border); background: var(--surface); }
 .site-footer .wrap { padding-block: 2.5rem; display: grid; gap: 1rem; font-size: 0.9rem; color: var(--muted); }
-@media (max-width: 1180px) {
+@media (max-width: 1320px) {
   .site-header [data-arr-drawer] .arr-chip-label { display: none; }
 }
 

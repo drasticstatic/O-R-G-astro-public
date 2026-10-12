@@ -138,6 +138,8 @@ export function mountMarble(canvas: HTMLCanvasElement) {
 
   host.addEventListener("pointermove", (e) => {
     if (e.pointerType === "touch") return;
+    // Cursor effects off (the arrival kit's switch, or motion still): the ink doesn't stir.
+    if (document.documentElement.dataset.cursor === "off") return;
     const r = canvas.getBoundingClientRect();
     const nx = (e.clientX - r.left) / r.width;
     const ny = 1 - (e.clientY - r.top) / r.height;

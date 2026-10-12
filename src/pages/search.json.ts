@@ -6,15 +6,15 @@ import { LAB, DAPP } from "../lib/url";
 export async function GET() {
   const items = [
     { type: "page", t: "The lab", k: "page", i: "flask", h: LAB, x: "home porch drasticstatic lab portfolio" },
-    { type: "page", t: "Lab changelog", k: "page", i: "clock-counter-clockwise", h: LAB + "changelog", pin: true, x: "history entries" },
-    { type: "page", t: "Map of ORG's sites and the lab", k: "page", i: "tree-structure", h: LAB + "map", x: "diagram hosting repositories" },
+    { type: "page", t: "Lab changelog", k: "page", i: "clock-counter-clockwise", h: LAB + "changelog/", pin: true, x: "history entries" },
+    { type: "page", t: "Map of ORG's sites and the lab", k: "page", i: "tree-structure", h: LAB + "map/", x: "diagram hosting repositories" },
     { type: "page", t: "O-R-G dApp preview", k: "lab", i: "cube", h: DAPP, x: "web3 wallet octagon three lights donation" },
     ...CHANGELOG.map((e) => ({
       type: "entry",
       t: e.title,
       k: `lab changelog · ${e.area}${e.date < LAB_STARTED ? " · sidecar era" : ""}`,
       i: e.area === "Lab" || e.area === "Preview" ? "flask" : "clock-counter-clockwise",
-      h: `${LAB}changelog#${entryId(e)}`,
+      h: `${LAB}changelog/#${entryId(e)}`,
       d: e.date,
       s: e.detail,
       who: e.who,
