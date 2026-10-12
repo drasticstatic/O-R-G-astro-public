@@ -1,7 +1,7 @@
 ---
 import Base from "../layouts/Base.astro";
 import { CHANGELOG, PEOPLE, ORG_ASTROLOG, entryId, madeBy } from "../data/changelog";
-import { url, DAPP, LIVE, PROPOSAL, ORG_SITE } from "../lib/url";
+import { url, DAPP, LIVE, DIRECTIONS, ORG_SITE } from "../lib/url";
 
 const latest = CHANGELOG.slice(0, 3);
 const fmt = (d: string) =>
@@ -24,6 +24,7 @@ const count = (p: (typeof PEOPLE)[number]) => CHANGELOG.filter((e) => madeBy(p, 
       <div class="cta">
         <a class="oct btn" href={url("changelog")}>Read the lab changelog</a>
         <a class="oct btn btn-quiet" href={DAPP}>Open the dApp preview</a>
+        <a class="oct btn btn-quiet" href={url("ledger")}>See the ledger</a>
       </div>
       <p class="hint arr-hint">Press <kbd>/</kbd> to search this lab and ORG's AstroLog at once. New here? <a href="#welcome" data-arrival-open="guide">Take the welcome tour</a>.</p>
     </div>
@@ -58,7 +59,7 @@ const count = (p: (typeof PEOPLE)[number]) => CHANGELOG.filter((e) => madeBy(p, 
       <a class="oct-card oct" href={DAPP}>
         <span class="oct-inner oct">
           <img class="emblem" src={url("art/core.webp")} alt="" width="72" height="72" />
-          <span><strong>O-R-G dApp preview</strong><span class="muted">The octagon made of ORG's art, all three lights, marbled ink you can stir, and a wallet-connect donation flow.</span></span>
+          <span><strong>O-R-G dApp preview</strong><span class="muted">A web3-ready preview: the octagon made of ORG's art, the beliefs, marbled ink you can stir, and a wallet-connect gift.</span></span>
         </span>
       </a>
       <div class="oct-card oct next">
@@ -106,10 +107,16 @@ const count = (p: (typeof PEOPLE)[number]) => CHANGELOG.filter((e) => madeBy(p, 
         <span><strong>ORG on GitHub</strong><span class="muted">ORG's entry portal: nine doors and its AstroLog.</span></span>
       </span>
     </a>
-    <a class="oct-card oct" href={PROPOSAL}>
+    <a class="oct-card oct" href={DIRECTIONS}>
       <span class="oct-inner oct">
         <img class="emblem" src={url("art/future.webp")} alt="" width="72" height="72" />
-        <span><strong>Design directions</strong><span class="muted">Renan's three proposals for a new look.</span></span>
+        <span><strong>Three directions, living together</strong><span class="muted">Renan's proposal that started these builds, kept as history in ORG's AstroLog. Help decide what comes next.</span></span>
+      </span>
+    </a>
+    <a class="oct-card oct" href={`${ORG_SITE}changelog-astro-public/ledger`}>
+      <span class="oct-inner oct">
+        <img class="emblem" src={url("art/research.webp")} alt="" width="72" height="72" />
+        <span><strong>ORG's ledger</strong><span class="muted">Every public change to ORG's code, in plain words.</span></span>
       </span>
     </a>
   </section>

@@ -17,6 +17,7 @@ const WEDGE: Record<string, number> = { Lab: 0, "Live site": 1, Content: 2, Prev
 export const entryUrl = (e: Entry) => `${LAB}changelog/${entryId(e)}/`;
 export const entryCardUrl = (e: Entry) => `${LAB}og/changelog/${entryId(e)}.jpg`;
 export const mapCardUrl = `${LAB}og/map.jpg`;
+export const ledgerCardUrl = `${LAB}og/ledger.jpg`;
 
 const fmt = (d: string) => new Date(`${d}T12:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" });
 const jpeg = (buf: Buffer) => new Response(new Uint8Array(buf), { headers: { "Content-Type": "image/jpeg" } });

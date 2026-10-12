@@ -1,7 +1,7 @@
 ---
 import "../styles/org.css";
 import OctagonMark from "../components/OctagonMark.astro";
-import { url, DAPP, LIVE, PROPOSAL, ORG_KIT, ORG_LOG, LAB } from "../lib/url";
+import { url, DAPP, LIVE, DIRECTIONS, ORG_KIT, ORG_LOG, ORG_SITE, LAB } from "../lib/url";
 
 interface Props {
   title: string;
@@ -25,6 +25,7 @@ const here = Astro.url.pathname.replace(/\/$/, "");
 const nav = [
   { href: url(""), label: "Lab" },
   { href: url("changelog"), label: "Changelog" },
+  { href: url("ledger"), label: "Ledger" },
   { href: url("map"), label: "Map" },
 ];
 
@@ -51,13 +52,23 @@ const labSite = {
       href: ORG_LOG,
       label: "Open the ORG AstroLog",
     },
+    ledger: {
+      name: "This lab's ledger",
+      text: "Every public change to the lab and the dApp preview, in plain words: grouped by day and by kind, and linked to the change itself. ORG's own repositories have theirs in the ORG AstroLog.",
+      href: LAB + "ledger/",
+      label: "Open the lab's ledger",
+    },
   },
+  // What's new since the last visit: the lab's own entries and ledger, not ORG's.
+  news: { sources: [LAB + "latest.json"] },
   sources: [
     { url: LAB + "search.json" },
     { url: ORG_LOG + "search.json", label: "ORG AstroLog", people: false },
   ],
   items: [
     { t: "dApp preview", k: "lab", i: "cube", h: DAPP, pin: true, x: "web3 wallet octagon three lights" },
+    { t: "The lab's ledger", k: "lab", i: "scroll", h: LAB + "ledger/", pin: true, x: "commits github history code record plain words" },
+    { t: "ORG's ledger", k: "ORG AstroLog", i: "scroll", h: ORG_LOG + "ledger", x: "commits github history org code" },
   ],
 };
 ---
@@ -130,7 +141,10 @@ const labSite = {
           The drasticstatic ORG lab: Christopher's previews and experiments for ORG. It isn't ORG's official site; that's <a href={LIVE}>orgspirituality.org</a>, where members vote on every change. ORG's official changelog is the <a href={ORG_LOG}>ORG AstroLog</a>.
         </p>
         <p>
-          The three lights come from <a href={PROPOSAL}>Renan Teixeira's design proposal</a>. Built by <a href="https://github.com/drasticstatic">drasticstatic</a> with <a href="https://github.com/drasticstatic/anthropas-argus-alfred-public-preview">Alfred</a>. New here? Open the <a href="#welcome" data-arrival-open="guide">welcome guide</a>.
+          ORG's sites: the <a href={ORG_SITE}>entry portal</a>, the <a href={ORG_LOG}>AstroLog</a>, its <a href={`${ORG_LOG}ledger`}>ledger</a> and <a href={`${ORG_LOG}map`}>map</a>, and <a href={LIVE}>orgspirituality.org</a>. This lab: the <a href={url("changelog/")}>changelog</a>, the <a href={url("ledger/")}>ledger</a>, and the <a href={DAPP}>dApp preview</a>.
+        </p>
+        <p>
+          The three lights began as <a href={DIRECTIONS}>Renan Teixeira's design proposal</a>, now kept as history in ORG's AstroLog. Built by <a href="https://github.com/drasticstatic">drasticstatic</a> with <a href="https://github.com/drasticstatic/anthropas-argus-alfred-public-preview">Alfred</a>. New here? Open the <a href="#welcome" data-arrival-open="guide">welcome guide</a>.
         </p>
       </div>
     </footer>
