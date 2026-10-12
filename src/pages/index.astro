@@ -1,6 +1,6 @@
 ---
 import Base from "../layouts/Base.astro";
-import { CHANGELOG, PEOPLE, ORG_ASTROLOG, madeBy } from "../data/changelog";
+import { CHANGELOG, PEOPLE, ORG_ASTROLOG, entryId, madeBy } from "../data/changelog";
 import { url, DAPP, LIVE, PROPOSAL, ORG_SITE } from "../lib/url";
 
 const latest = CHANGELOG.slice(0, 3);
@@ -45,7 +45,7 @@ const count = (p: (typeof PEOPLE)[number]) => CHANGELOG.filter((e) => madeBy(p, 
       {latest.map((e) => (
         <li>
           <time datetime={e.date} class="muted">{fmt(e.date)}</time>
-          <h3>{e.link ? <a href={e.link}>{e.title}</a> : e.title}</h3>
+          <h3><a href={url(`changelog/${entryId(e)}/`)}>{e.title}</a></h3>
           <p class="muted">{e.detail}</p>
         </li>
       ))}
