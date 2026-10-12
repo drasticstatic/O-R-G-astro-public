@@ -10,7 +10,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "map:snapshot": "curl -fsS https://octagon-religious-research-group-org.github.io/changelog-astro-public/map.json -o src/data/map.snapshot.json"
+    "map:snapshot": "curl -fsS https://octagon-religious-research-group-org.github.io/changelog-astro-public/map.json -o src/data/map.snapshot.json",
+    "ledger:snapshot": "node src/ledger/snapshot.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-satteri": "0.4.1",

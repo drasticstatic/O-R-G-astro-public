@@ -22,6 +22,21 @@ const BACKEND = "https://github.com/Octagon-Religious-Research-Group-ORG/org-bac
 export const CHANGELOG: Entry[] = [
   {
     date: "2026-10-12",
+    title: "A ledger of every public change, in plain words",
+    detail: "A new Ledger page lists every public change to the lab and the dApp preview: tidied into a plain sentence, sorted by kind (look and feel, records, new things, behind the scenes…), grouped by day and site, and linked to the change itself. It's gathered from the public mirrors only and rebuilt every day, and the same daily rebuild redraws the map from ORG's latest copy. ORG's own repositories have their ledger in the ORG AstroLog.",
+    area: "Lab",
+    who: "drasticstatic with Alfred",
+    link: "https://drasticstatic.github.io/O-R-G-astro-public/ledger/",
+  },
+  {
+    date: "2026-10-12",
+    title: "Reading mode, and what's new since your last visit",
+    detail: "The book button in the header is reading mode: one tap for Stone & Lapis, still ink, more contrast and no cursor trail, and another tap brings back what you had. Coming back later, a small count beside the search button shows lab entries and ledger changes that are new since your last visit, and opening it clears it.",
+    area: "Lab",
+    who: "drasticstatic with Alfred",
+  },
+  {
+    date: "2026-10-12",
     title: "Every entry gets its own page and preview card",
     detail: "Share one change and it arrives designed: each entry now has a page of its own, and a link to it shows that entry's title, summary and who made it in Telegram, iMessage or Discord. If Telegram shows an old preview, send the link to @WebpageBot to refresh it.",
     area: "Lab",

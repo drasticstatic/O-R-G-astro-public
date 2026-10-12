@@ -1,0 +1,915 @@
+{
+ "version": 1,
+ "owner": "drasticstatic",
+ "generated": "2026-10-12T19:38:00.706Z",
+ "timeZone": "America/New_York",
+ "total": 15,
+ "shown": 15,
+ "filtered": {
+  "merges": 0,
+  "mirrors": 0,
+  "bots": 0,
+  "undone": 0
+ },
+ "repos": [
+  {
+   "name": "O-R-G-astro-public",
+   "label": "The lab",
+   "blurb": "This site",
+   "url": "https://github.com/drasticstatic/O-R-G-astro-public",
+   "count": 9
+  },
+  {
+   "name": "O-R-G-dapp-public-preview",
+   "label": "dApp preview",
+   "blurb": "The O-R-G dApp preview",
+   "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview",
+   "count": 6
+  }
+ ],
+ "kinds": [
+  {
+   "id": "look",
+   "name": "Look and feel",
+   "icon": "palette",
+   "count": 6
+  },
+  {
+   "id": "records",
+   "name": "Records and docs",
+   "icon": "notebook",
+   "count": 5
+  },
+  {
+   "id": "under",
+   "name": "Behind the scenes",
+   "icon": "gear-six",
+   "count": 1
+  },
+  {
+   "id": "new",
+   "name": "New",
+   "icon": "sparkle",
+   "count": 2
+  },
+  {
+   "id": "update",
+   "name": "Updates",
+   "icon": "arrows-clockwise",
+   "count": 1
+  }
+ ],
+ "people": [
+  {
+   "name": "Christopher",
+   "github": "drasticstatic",
+   "count": 15
+  }
+ ],
+ "first": "2026-09-15",
+ "last": "2026-10-12",
+ "months": [
+  {
+   "key": "2026-10",
+   "label": "October 2026",
+   "count": 12,
+   "days": [
+    {
+     "date": "2026-10-12",
+     "label": "Monday, October 12",
+     "groups": [
+      {
+       "repo": "O-R-G-astro-public",
+       "label": "The lab",
+       "items": [
+        {
+         "id": "b4e84968e4f0",
+         "sha": "b4e84968e4f03a0ca413f38362376d946120d6b5",
+         "short": "b4e8496",
+         "repo": "O-R-G-astro-public",
+         "repoLabel": "The lab",
+         "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/b4e84968e4f03a0ca413f38362376d946120d6b5",
+         "d": "2026-10-12",
+         "time": "6:05 AM",
+         "ts": "2026-10-12T10:05:24Z",
+         "text": "Draw the map from ORG's canonical copy; the map gets its own card",
+         "area": "Lab",
+         "kind": {
+          "id": "records",
+          "name": "Records and docs",
+          "icon": "notebook"
+         },
+         "who": {
+          "name": "Christopher",
+          "github": "drasticstatic",
+          "known": true
+         },
+         "with": [
+          "Alfred"
+         ]
+        },
+        {
+         "id": "a06f2cb50cf2",
+         "sha": "a06f2cb50cf2e8134e706f15ce2f6ffe8515558c",
+         "short": "a06f2cb",
+         "repo": "O-R-G-astro-public",
+         "repoLabel": "The lab",
+         "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/a06f2cb50cf2e8134e706f15ce2f6ffe8515558c",
+         "d": "2026-10-12",
+         "time": "5:58 AM",
+         "ts": "2026-10-12T09:58:31Z",
+         "text": "A page and a social card for every entry",
+         "area": "Lab",
+         "kind": {
+          "id": "records",
+          "name": "Records and docs",
+          "icon": "notebook"
+         },
+         "who": {
+          "name": "Christopher",
+          "github": "drasticstatic",
+          "known": true
+         },
+         "with": [
+          "Alfred"
+         ]
+        },
+        {
+         "id": "12147efde34d",
+         "sha": "12147efde34d660d75e79e8a4b628a228793c8d0",
+         "short": "12147ef",
+         "repo": "O-R-G-astro-public",
+         "repoLabel": "The lab",
+         "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/12147efde34d660d75e79e8a4b628a228793c8d0",
+         "d": "2026-10-12",
+         "time": "5:51 AM",
+         "ts": "2026-10-12T09:51:48Z",
+         "text": "Full link-preview tags and a real social card",
+         "area": "Lab",
+         "kind": {
+          "id": "records",
+          "name": "Records and docs",
+          "icon": "notebook"
+         },
+         "who": {
+          "name": "Christopher",
+          "github": "drasticstatic",
+          "known": true
+         },
+         "with": [
+          "Alfred"
+         ]
+        },
+        {
+         "id": "09667c8448ca",
+         "sha": "09667c8448cadd8cca5157a9ecfdaf2e4fac7d86",
+         "short": "09667c8",
+         "repo": "O-R-G-astro-public",
+         "repoLabel": "The lab",
+         "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/09667c8448cadd8cca5157a9ecfdaf2e4fac7d86",
+         "d": "2026-10-12",
+         "time": "5:48 AM",
+         "ts": "2026-10-12T09:48:51Z",
+         "text": "Cursor-effects switch from ORG's kit; the ink rests when it's off",
+         "area": "Lab",
+         "kind": {
+          "id": "look",
+          "name": "Look and feel",
+          "icon": "palette"
+         },
+         "who": {
+          "name": "Christopher",
+          "github": "drasticstatic",
+          "known": true
+         },
+         "with": [
+          "Alfred"
+         ]
+        },
+        {
+         "id": "f3b520564a52",
+         "sha": "f3b520564a5268300b555f9c22c2ed2d101506e1",
+         "short": "f3b5205",
+         "repo": "O-R-G-astro-public",
+         "repoLabel": "The lab",
+         "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/f3b520564a5268300b555f9c22c2ed2d101506e1",
+         "d": "2026-10-12",
+         "time": "5:40 AM",
+         "ts": "2026-10-12T09:40:57Z",
+         "text": "The sidecar becomes the drasticstatic ORG lab, on ORG's arrival kit",
+         "area": "",
+         "kind": {
+          "id": "update",
+          "name": "Updates",
+          "icon": "arrows-clockwise"
+         },
+         "who": {
+          "name": "Christopher",
+          "github": "drasticstatic",
+          "known": true
+         },
+         "with": [
+          "Alfred"
+         ]
+        }
+       ]
+      },
+      {
+       "repo": "O-R-G-dapp-public-preview",
+       "label": "dApp preview",
+       "items": [
+        {
+         "id": "53716689ed1c",
+         "sha": "53716689ed1c6802583b339e5d61104a8794e36c",
+         "short": "5371668",
+         "repo": "O-R-G-dapp-public-preview",
+         "repoLabel": "dApp preview",
+         "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/53716689ed1c6802583b339e5d61104a8794e36c",
+         "d": "2026-10-12",
+         "time": "5:52 AM",
+         "ts": "2026-10-12T09:52:52Z",
+         "text": "Link previews: og/twitter tags and a social card for the public preview",
+         "area": "",
+         "kind": {
+          "id": "records",
+          "name": "Records and docs",
+          "icon": "notebook"
+         },
+         "who": {
+          "name": "Christopher",
+          "github": "drasticstatic",
+          "known": true
+         },
+         "with": [
+          "Alfred"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2026-10-05",
+     "label": "Monday, October 5",
+     "groups": [
+      {
+       "repo": "O-R-G-dapp-public-preview",
+       "label": "dApp preview",
+       "items": [
+        {
+         "id": "3dfc15d73854",
+         "sha": "3dfc15d7385465fe2c42f30450b65ce17326b8bb",
+         "short": "3dfc15d",
+         "repo": "O-R-G-dapp-public-preview",
+         "repoLabel": "dApp preview",
+         "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/3dfc15d7385465fe2c42f30450b65ce17326b8bb",
+         "d": "2026-10-05",
+         "time": "7:32 PM",
+         "ts": "2026-10-05T23:32:18Z",
+         "text": "Fade the hero marble before its edge and credit the blotter sheet to Tripp",
+         "area": "",
+         "kind": {
+          "id": "look",
+          "name": "Look and feel",
+          "icon": "palette"
+         },
+         "who": {
+          "name": "Christopher",
+          "github": "drasticstatic",
+          "known": true
+         },
+         "with": [
+          "Alfred"
+         ]
+        },
+        {
+         "id": "a044244da3d8",
+         "sha": "a044244da3d8e72f39243270562fd44942087045",
+         "short": "a044244",
+         "repo": "O-R-G-dapp-public-preview",
+         "repoLabel": "dApp preview",
+         "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/a044244da3d8e72f39243270562fd44942087045",
+         "d": "2026-10-05",
+         "time": "7:24 PM",
+         "ts": "2026-10-05T23:24:31Z",
+         "text": "Redesign the dApp preview around ORG's three lights and the octagon",
+         "area": "",
+         "kind": {
+          "id": "look",
+          "name": "Look and feel",
+          "icon": "palette"
+         },
+         "who": {
+          "name": "Christopher",
+          "github": "drasticstatic",
+          "known": true
+         },
+         "with": [
+          "Alfred"
+         ]
+        },
+        {
+         "id": "eaca3f354ae3",
+         "sha": "eaca3f354ae3fa118382cd6c15a8bc219844d304",
+         "short": "eaca3f3",
+         "repo": "O-R-G-dapp-public-preview",
+         "repoLabel": "dApp preview",
+         "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/eaca3f354ae3fa118382cd6c15a8bc219844d304",
+         "d": "2026-10-05",
+         "time": "6:05 PM",
+         "ts": "2026-10-05T22:05:43Z",
+         "text": "Restyle dApp with ORG Design Directions palettes and theme toggle",
+         "area": "",
+         "kind": {
+          "id": "look",
+          "name": "Look and feel",
+          "icon": "palette"
+         },
+         "who": {
+          "name": "Christopher",
+          "github": "drasticstatic",
+          "known": true
+         },
+         "with": []
+        },
+        {
+         "id": "d6da568cd2b6",
+         "sha": "d6da568cd2b6436a7f909559b05ad7aa558872be",
+         "short": "d6da568",
+         "repo": "O-R-G-dapp-public-preview",
+         "repoLabel": "dApp preview",
+         "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/d6da568cd2b6436a7f909559b05ad7aa558872be",
+         "d": "2026-10-05",
+         "time": "5:31 PM",
+         "ts": "2026-10-05T21:31:13Z",
+         "text": "Fall back to placeholder web3 config when CI secrets are empty",
+         "area": "",
+         "kind": {
+          "id": "under",
+          "name": "Behind the scenes",
+          "icon": "gear-six"
+         },
+         "who": {
+          "name": "Christopher",
+          "github": "drasticstatic",
+          "known": true
+         },
+         "with": []
+        }
+       ]
+      },
+      {
+       "repo": "O-R-G-astro-public",
+       "label": "The lab",
+       "items": [
+        {
+         "id": "01524ef9099d",
+         "sha": "01524ef9099d8d6be3372f59be942c235c9a1d71",
+         "short": "01524ef",
+         "repo": "O-R-G-astro-public",
+         "repoLabel": "The lab",
+         "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/01524ef9099d8d6be3372f59be942c235c9a1d71",
+         "d": "2026-10-05",
+         "time": "7:31 PM",
+         "ts": "2026-10-05T23:31:52Z",
+         "text": "Give the sidecar its content: changelog, map, and the three lights",
+         "area": "",
+         "kind": {
+          "id": "look",
+          "name": "Look and feel",
+          "icon": "palette"
+         },
+         "who": {
+          "name": "Christopher",
+          "github": "drasticstatic",
+          "known": true
+         },
+         "with": [
+          "Alfred"
+         ]
+        },
+        {
+         "id": "e734274a43d1",
+         "sha": "e734274a43d1f7438c5ca0bd52ffaa28a4241254",
+         "short": "e734274",
+         "repo": "O-R-G-astro-public",
+         "repoLabel": "The lab",
+         "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/e734274a43d1f7438c5ca0bd52ffaa28a4241254",
+         "d": "2026-10-05",
+         "time": "6:05 PM",
+         "ts": "2026-10-05T22:05:31Z",
+         "text": "Restyle sidecar with ORG Design Directions palettes and theme toggle",
+         "area": "",
+         "kind": {
+          "id": "look",
+          "name": "Look and feel",
+          "icon": "palette"
+         },
+         "who": {
+          "name": "Christopher",
+          "github": "drasticstatic",
+          "known": true
+         },
+         "with": []
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "key": "2026-09",
+   "label": "September 2026",
+   "count": 3,
+   "days": [
+    {
+     "date": "2026-09-23",
+     "label": "Wednesday, September 23",
+     "groups": [
+      {
+       "repo": "O-R-G-astro-public",
+       "label": "The lab",
+       "items": [
+        {
+         "id": "cda97da939b9",
+         "sha": "cda97da939b9a04d0f52a14a07e29c00cb1fd28e",
+         "short": "cda97da",
+         "repo": "O-R-G-astro-public",
+         "repoLabel": "The lab",
+         "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/cda97da939b9a04d0f52a14a07e29c00cb1fd28e",
+         "d": "2026-09-23",
+         "time": "8:25 PM",
+         "ts": "2026-09-24T00:25:41Z",
+         "text": "Breadcrumb the new fleet-wide changelog-template for this scaffold",
+         "area": "README",
+         "kind": {
+          "id": "records",
+          "name": "Records and docs",
+          "icon": "notebook"
+         },
+         "who": {
+          "name": "Christopher",
+          "github": "drasticstatic",
+          "known": true
+         },
+         "with": [
+          "Alfred"
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2026-09-15",
+     "label": "Tuesday, September 15",
+     "groups": [
+      {
+       "repo": "O-R-G-astro-public",
+       "label": "The lab",
+       "items": [
+        {
+         "id": "31edfacbe149",
+         "sha": "31edfacbe149b74072825894e361ba03f71b83b6",
+         "short": "31edfac",
+         "repo": "O-R-G-astro-public",
+         "repoLabel": "The lab",
+         "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/31edfacbe149b74072825894e361ba03f71b83b6",
+         "d": "2026-09-15",
+         "time": "9:51 AM",
+         "ts": "2026-09-15T13:51:16Z",
+         "text": "Scaffold O-R-G-astro: sidecar site, mirroring gratitude-token-project_astro",
+         "area": "",
+         "kind": {
+          "id": "new",
+          "name": "New",
+          "icon": "sparkle"
+         },
+         "who": {
+          "name": "Christopher",
+          "github": "drasticstatic",
+          "known": true
+         },
+         "with": []
+        }
+       ]
+      },
+      {
+       "repo": "O-R-G-dapp-public-preview",
+       "label": "dApp preview",
+       "items": [
+        {
+         "id": "3d600976c811",
+         "sha": "3d600976c811d22a467003f9e38feb5c6afa1193",
+         "short": "3d60097",
+         "repo": "O-R-G-dapp-public-preview",
+         "repoLabel": "dApp preview",
+         "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/3d600976c811d22a467003f9e38feb5c6afa1193",
+         "d": "2026-09-15",
+         "time": "9:45 AM",
+         "ts": "2026-09-15T13:45:07Z",
+         "text": "Scaffold O-R-G-dapp: Next.js + web3 rebuild of orgspirituality.org",
+         "area": "",
+         "kind": {
+          "id": "new",
+          "name": "New",
+          "icon": "sparkle"
+         },
+         "who": {
+          "name": "Christopher",
+          "github": "drasticstatic",
+          "known": true
+         },
+         "with": []
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "items": [
+  {
+   "id": "b4e84968e4f0",
+   "sha": "b4e84968e4f03a0ca413f38362376d946120d6b5",
+   "short": "b4e8496",
+   "repo": "O-R-G-astro-public",
+   "repoLabel": "The lab",
+   "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/b4e84968e4f03a0ca413f38362376d946120d6b5",
+   "d": "2026-10-12",
+   "time": "6:05 AM",
+   "ts": "2026-10-12T10:05:24Z",
+   "text": "Draw the map from ORG's canonical copy; the map gets its own card",
+   "area": "Lab",
+   "kind": {
+    "id": "records",
+    "name": "Records and docs",
+    "icon": "notebook"
+   },
+   "who": {
+    "name": "Christopher",
+    "github": "drasticstatic",
+    "known": true
+   },
+   "with": [
+    "Alfred"
+   ]
+  },
+  {
+   "id": "a06f2cb50cf2",
+   "sha": "a06f2cb50cf2e8134e706f15ce2f6ffe8515558c",
+   "short": "a06f2cb",
+   "repo": "O-R-G-astro-public",
+   "repoLabel": "The lab",
+   "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/a06f2cb50cf2e8134e706f15ce2f6ffe8515558c",
+   "d": "2026-10-12",
+   "time": "5:58 AM",
+   "ts": "2026-10-12T09:58:31Z",
+   "text": "A page and a social card for every entry",
+   "area": "Lab",
+   "kind": {
+    "id": "records",
+    "name": "Records and docs",
+    "icon": "notebook"
+   },
+   "who": {
+    "name": "Christopher",
+    "github": "drasticstatic",
+    "known": true
+   },
+   "with": [
+    "Alfred"
+   ]
+  },
+  {
+   "id": "53716689ed1c",
+   "sha": "53716689ed1c6802583b339e5d61104a8794e36c",
+   "short": "5371668",
+   "repo": "O-R-G-dapp-public-preview",
+   "repoLabel": "dApp preview",
+   "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/53716689ed1c6802583b339e5d61104a8794e36c",
+   "d": "2026-10-12",
+   "time": "5:52 AM",
+   "ts": "2026-10-12T09:52:52Z",
+   "text": "Link previews: og/twitter tags and a social card for the public preview",
+   "area": "",
+   "kind": {
+    "id": "records",
+    "name": "Records and docs",
+    "icon": "notebook"
+   },
+   "who": {
+    "name": "Christopher",
+    "github": "drasticstatic",
+    "known": true
+   },
+   "with": [
+    "Alfred"
+   ]
+  },
+  {
+   "id": "12147efde34d",
+   "sha": "12147efde34d660d75e79e8a4b628a228793c8d0",
+   "short": "12147ef",
+   "repo": "O-R-G-astro-public",
+   "repoLabel": "The lab",
+   "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/12147efde34d660d75e79e8a4b628a228793c8d0",
+   "d": "2026-10-12",
+   "time": "5:51 AM",
+   "ts": "2026-10-12T09:51:48Z",
+   "text": "Full link-preview tags and a real social card",
+   "area": "Lab",
+   "kind": {
+    "id": "records",
+    "name": "Records and docs",
+    "icon": "notebook"
+   },
+   "who": {
+    "name": "Christopher",
+    "github": "drasticstatic",
+    "known": true
+   },
+   "with": [
+    "Alfred"
+   ]
+  },
+  {
+   "id": "09667c8448ca",
+   "sha": "09667c8448cadd8cca5157a9ecfdaf2e4fac7d86",
+   "short": "09667c8",
+   "repo": "O-R-G-astro-public",
+   "repoLabel": "The lab",
+   "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/09667c8448cadd8cca5157a9ecfdaf2e4fac7d86",
+   "d": "2026-10-12",
+   "time": "5:48 AM",
+   "ts": "2026-10-12T09:48:51Z",
+   "text": "Cursor-effects switch from ORG's kit; the ink rests when it's off",
+   "area": "Lab",
+   "kind": {
+    "id": "look",
+    "name": "Look and feel",
+    "icon": "palette"
+   },
+   "who": {
+    "name": "Christopher",
+    "github": "drasticstatic",
+    "known": true
+   },
+   "with": [
+    "Alfred"
+   ]
+  },
+  {
+   "id": "f3b520564a52",
+   "sha": "f3b520564a5268300b555f9c22c2ed2d101506e1",
+   "short": "f3b5205",
+   "repo": "O-R-G-astro-public",
+   "repoLabel": "The lab",
+   "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/f3b520564a5268300b555f9c22c2ed2d101506e1",
+   "d": "2026-10-12",
+   "time": "5:40 AM",
+   "ts": "2026-10-12T09:40:57Z",
+   "text": "The sidecar becomes the drasticstatic ORG lab, on ORG's arrival kit",
+   "area": "",
+   "kind": {
+    "id": "update",
+    "name": "Updates",
+    "icon": "arrows-clockwise"
+   },
+   "who": {
+    "name": "Christopher",
+    "github": "drasticstatic",
+    "known": true
+   },
+   "with": [
+    "Alfred"
+   ]
+  },
+  {
+   "id": "3dfc15d73854",
+   "sha": "3dfc15d7385465fe2c42f30450b65ce17326b8bb",
+   "short": "3dfc15d",
+   "repo": "O-R-G-dapp-public-preview",
+   "repoLabel": "dApp preview",
+   "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/3dfc15d7385465fe2c42f30450b65ce17326b8bb",
+   "d": "2026-10-05",
+   "time": "7:32 PM",
+   "ts": "2026-10-05T23:32:18Z",
+   "text": "Fade the hero marble before its edge and credit the blotter sheet to Tripp",
+   "area": "",
+   "kind": {
+    "id": "look",
+    "name": "Look and feel",
+    "icon": "palette"
+   },
+   "who": {
+    "name": "Christopher",
+    "github": "drasticstatic",
+    "known": true
+   },
+   "with": [
+    "Alfred"
+   ]
+  },
+  {
+   "id": "01524ef9099d",
+   "sha": "01524ef9099d8d6be3372f59be942c235c9a1d71",
+   "short": "01524ef",
+   "repo": "O-R-G-astro-public",
+   "repoLabel": "The lab",
+   "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/01524ef9099d8d6be3372f59be942c235c9a1d71",
+   "d": "2026-10-05",
+   "time": "7:31 PM",
+   "ts": "2026-10-05T23:31:52Z",
+   "text": "Give the sidecar its content: changelog, map, and the three lights",
+   "area": "",
+   "kind": {
+    "id": "look",
+    "name": "Look and feel",
+    "icon": "palette"
+   },
+   "who": {
+    "name": "Christopher",
+    "github": "drasticstatic",
+    "known": true
+   },
+   "with": [
+    "Alfred"
+   ]
+  },
+  {
+   "id": "a044244da3d8",
+   "sha": "a044244da3d8e72f39243270562fd44942087045",
+   "short": "a044244",
+   "repo": "O-R-G-dapp-public-preview",
+   "repoLabel": "dApp preview",
+   "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/a044244da3d8e72f39243270562fd44942087045",
+   "d": "2026-10-05",
+   "time": "7:24 PM",
+   "ts": "2026-10-05T23:24:31Z",
+   "text": "Redesign the dApp preview around ORG's three lights and the octagon",
+   "area": "",
+   "kind": {
+    "id": "look",
+    "name": "Look and feel",
+    "icon": "palette"
+   },
+   "who": {
+    "name": "Christopher",
+    "github": "drasticstatic",
+    "known": true
+   },
+   "with": [
+    "Alfred"
+   ]
+  },
+  {
+   "id": "eaca3f354ae3",
+   "sha": "eaca3f354ae3fa118382cd6c15a8bc219844d304",
+   "short": "eaca3f3",
+   "repo": "O-R-G-dapp-public-preview",
+   "repoLabel": "dApp preview",
+   "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/eaca3f354ae3fa118382cd6c15a8bc219844d304",
+   "d": "2026-10-05",
+   "time": "6:05 PM",
+   "ts": "2026-10-05T22:05:43Z",
+   "text": "Restyle dApp with ORG Design Directions palettes and theme toggle",
+   "area": "",
+   "kind": {
+    "id": "look",
+    "name": "Look and feel",
+    "icon": "palette"
+   },
+   "who": {
+    "name": "Christopher",
+    "github": "drasticstatic",
+    "known": true
+   },
+   "with": []
+  },
+  {
+   "id": "e734274a43d1",
+   "sha": "e734274a43d1f7438c5ca0bd52ffaa28a4241254",
+   "short": "e734274",
+   "repo": "O-R-G-astro-public",
+   "repoLabel": "The lab",
+   "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/e734274a43d1f7438c5ca0bd52ffaa28a4241254",
+   "d": "2026-10-05",
+   "time": "6:05 PM",
+   "ts": "2026-10-05T22:05:31Z",
+   "text": "Restyle sidecar with ORG Design Directions palettes and theme toggle",
+   "area": "",
+   "kind": {
+    "id": "look",
+    "name": "Look and feel",
+    "icon": "palette"
+   },
+   "who": {
+    "name": "Christopher",
+    "github": "drasticstatic",
+    "known": true
+   },
+   "with": []
+  },
+  {
+   "id": "d6da568cd2b6",
+   "sha": "d6da568cd2b6436a7f909559b05ad7aa558872be",
+   "short": "d6da568",
+   "repo": "O-R-G-dapp-public-preview",
+   "repoLabel": "dApp preview",
+   "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/d6da568cd2b6436a7f909559b05ad7aa558872be",
+   "d": "2026-10-05",
+   "time": "5:31 PM",
+   "ts": "2026-10-05T21:31:13Z",
+   "text": "Fall back to placeholder web3 config when CI secrets are empty",
+   "area": "",
+   "kind": {
+    "id": "under",
+    "name": "Behind the scenes",
+    "icon": "gear-six"
+   },
+   "who": {
+    "name": "Christopher",
+    "github": "drasticstatic",
+    "known": true
+   },
+   "with": []
+  },
+  {
+   "id": "cda97da939b9",
+   "sha": "cda97da939b9a04d0f52a14a07e29c00cb1fd28e",
+   "short": "cda97da",
+   "repo": "O-R-G-astro-public",
+   "repoLabel": "The lab",
+   "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/cda97da939b9a04d0f52a14a07e29c00cb1fd28e",
+   "d": "2026-09-23",
+   "time": "8:25 PM",
+   "ts": "2026-09-24T00:25:41Z",
+   "text": "Breadcrumb the new fleet-wide changelog-template for this scaffold",
+   "area": "README",
+   "kind": {
+    "id": "records",
+    "name": "Records and docs",
+    "icon": "notebook"
+   },
+   "who": {
+    "name": "Christopher",
+    "github": "drasticstatic",
+    "known": true
+   },
+   "with": [
+    "Alfred"
+   ]
+  },
+  {
+   "id": "31edfacbe149",
+   "sha": "31edfacbe149b74072825894e361ba03f71b83b6",
+   "short": "31edfac",
+   "repo": "O-R-G-astro-public",
+   "repoLabel": "The lab",
+   "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/31edfacbe149b74072825894e361ba03f71b83b6",
+   "d": "2026-09-15",
+   "time": "9:51 AM",
+   "ts": "2026-09-15T13:51:16Z",
+   "text": "Scaffold O-R-G-astro: sidecar site, mirroring gratitude-token-project_astro",
+   "area": "",
+   "kind": {
+    "id": "new",
+    "name": "New",
+    "icon": "sparkle"
+   },
+   "who": {
+    "name": "Christopher",
+    "github": "drasticstatic",
+    "known": true
+   },
+   "with": []
+  },
+  {
+   "id": "3d600976c811",
+   "sha": "3d600976c811d22a467003f9e38feb5c6afa1193",
+   "short": "3d60097",
+   "repo": "O-R-G-dapp-public-preview",
+   "repoLabel": "dApp preview",
+   "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/3d600976c811d22a467003f9e38feb5c6afa1193",
+   "d": "2026-09-15",
+   "time": "9:45 AM",
+   "ts": "2026-09-15T13:45:07Z",
+   "text": "Scaffold O-R-G-dapp: Next.js + web3 rebuild of orgspirituality.org",
+   "area": "",
+   "kind": {
+    "id": "new",
+    "name": "New",
+    "icon": "sparkle"
+   },
+   "who": {
+    "name": "Christopher",
+    "github": "drasticstatic",
+    "known": true
+   },
+   "with": []
+  }
+ ]
+}
