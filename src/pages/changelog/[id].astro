@@ -1,0 +1,76 @@
+---
+// One page per lab entry, so a single change can be shared on its own, with its own preview card.
+import Base from "../../layouts/Base.astro";
+import { CHANGELOG, LAB_STARTED, ORG_ASTROLOG, entryId, peopleIn, type Entry } from "../../data/changelog";
+import { entryCardUrl } from "../../og/cards";
+import { url } from "../../lib/url";
+
+export function getStaticPaths() {
+  return CHANGELOG.map((entry, i) => ({
+    params: { id: entryId(entry) },
+    // CHANGELOG is newest first: the next-newer entry is i - 1, the next-older i + 1.
+    props: { entry, newer: CHANGELOG[i - 1] ?? null, older: CHANGELOG[i + 1] ?? null },
+  }));
+}
+
+const { entry, newer, older } = Astro.props as { entry: Entry; newer: Entry | null; older: Entry | null };
+const day = new Date(`${entry.date}T12:00:00Z`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
+const history = entry.date < LAB_STARTED;
+---
+<Base
+  title={`${entry.title}: drasticstatic ORG lab`}
+  description={entry.detail}
+  ogImage={entryCardUrl(entry)}
+  ogAlt={`${entry.title}. An entry in the drasticstatic ORG lab's changelog, by ${entry.who}.`}
+  ogType="article"
+>
+  <article class="wrap entry">
+    <p class="back"><a href={url("changelog")}>All lab entries</a></p>
+    <div class="meta muted">
+      <time datetime={entry.date}>{day}</time>
+      <span>{entry.area}</span>
+      {history && <span class="era">sidecar era</span>}
+    </div>
+    <h1>{entry.title}</h1>
+    <p class="who muted">
+      <span class="arr-stack" aria-hidden="true">
+        {peopleIn(entry.who).map((p) => <arrival-avatar name={p.name} github={p.github} size={26} />)}
+      </span>
+      By {entry.who}
+    </p>
+    <p class="detail">{entry.detail}</p>
+    <div class="ways">
+      {entry.link && <a class="oct btn" href={entry.link}><i class="ph ph-arrow-square-out" aria-hidden="true"></i>See it</a>}
+      <button type="button" class="oct btn btn-quiet" data-arrival-open="copy"><i class="ph ph-link" aria-hidden="true"></i>Copy a link to this entry</button>
+    </div>
+    <p class="muted share">Shared in Telegram, iMessage or Discord, this link arrives with its own preview card.</p>
+    {history && (
+      <p class="muted note">
+        From the sidecar era, before this site became the lab. ORG's own repositories now have their official record in the <a href={ORG_ASTROLOG}>ORG AstroLog</a>.
+      </p>
+    )}
+    <nav class="pn" aria-label="Neighboring entries">
+      {older ? <a href={url(`changelog/${entryId(older)}/`)}><span class="muted">Earlier</span>{older.title}</a> : <span />}
+      {newer ? <a class="newer" href={url(`changelog/${entryId(newer)}/`)}><span class="muted">Later</span>{newer.title}</a> : <span />}
+    </nav>
+  </article>
+</Base>
+
+<style>
+  .entry { padding-block: 3.5rem 5rem; max-width: 48rem; }
+  .back a { color: var(--muted); text-decoration: none; font-size: 0.92rem; }
+  .back a:hover { color: var(--accent); }
+  .meta { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; align-items: center; margin-top: 1.5rem; font-size: 0.9rem; }
+  .era { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.12rem 0.45rem; border: 1px solid var(--border); }
+  h1 { font-size: clamp(2.2rem, 5.5vw, 3.4rem); line-height: 1.08; margin-top: 0.6rem; }
+  .who { display: flex; align-items: center; gap: 0.6rem; margin-top: 1rem; }
+  .detail { margin-top: 1.5rem; font-size: 1.2rem; max-width: 40rem; }
+  .ways { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+  .share { margin-top: 0.75rem; font-size: 0.88rem; }
+  .note { margin-top: 1.5rem; font-size: 0.92rem; }
+  .pn { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 3rem; }
+  .pn a { display: flex; flex-direction: column; gap: 0.2rem; color: var(--heading); text-decoration: none; font-weight: 600; }
+  .pn a:hover { color: var(--accent); }
+  .pn .newer { text-align: right; grid-column: 2; }
+  .pn span.muted { font-weight: 400; font-size: 0.85rem; }
+</style>

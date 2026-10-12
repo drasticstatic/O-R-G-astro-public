@@ -22,6 +22,13 @@ const BACKEND = "https://github.com/Octagon-Religious-Research-Group-ORG/org-bac
 export const CHANGELOG: Entry[] = [
   {
     date: "2026-10-12",
+    title: "Every entry gets its own page and preview card",
+    detail: "Share one change and it arrives designed: each entry now has a page of its own, and a link to it shows that entry's title, summary and who made it in Telegram, iMessage or Discord. If Telegram shows an old preview, send the link to @WebpageBot to refresh it.",
+    area: "Lab",
+    who: "drasticstatic with Alfred",
+  },
+  {
+    date: "2026-10-12",
     title: "Choose how you arrive, here too",
     detail: "The lab now runs on ORG's arrival kit: a first-visit welcome, light, motion and contrast that carry over to the dApp preview, a welcome guide, and / to search this lab and ORG's AstroLog at once.",
     area: "Lab",

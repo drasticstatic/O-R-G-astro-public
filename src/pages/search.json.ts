@@ -14,7 +14,7 @@ export async function GET() {
       t: e.title,
       k: `lab changelog · ${e.area}${e.date < LAB_STARTED ? " · sidecar era" : ""}`,
       i: e.area === "Lab" || e.area === "Preview" ? "flask" : "clock-counter-clockwise",
-      h: `${LAB}changelog/#${entryId(e)}`,
+      h: `${LAB}changelog/${entryId(e)}/`,
       d: e.date,
       s: e.detail,
       who: e.who,
