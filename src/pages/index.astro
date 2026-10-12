@@ -1,33 +1,46 @@
 ---
 import Base from "../layouts/Base.astro";
-import { CHANGELOG } from "../data/changelog";
-import { url, DAPP, LIVE, PROPOSAL } from "../lib/url";
+import { CHANGELOG, PEOPLE, ORG_ASTROLOG, madeBy } from "../data/changelog";
+import { url, DAPP, LIVE, PROPOSAL, ORG_SITE } from "../lib/url";
 
 const latest = CHANGELOG.slice(0, 3);
 const fmt = (d: string) =>
   new Date(`${d}T12:00:00`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+const count = (p: (typeof PEOPLE)[number]) => CHANGELOG.filter((e) => madeBy(p, e.who)).length;
 ---
-<Base title="ORG sidecar: changelog and map">
+<Base title="drasticstatic ORG lab: what Christopher builds for ORG">
   <section class="hero">
     <div class="hero-bg" aria-hidden="true">
       <canvas class="marble" id="marble"></canvas>
       <div class="hero-veil"></div>
     </div>
     <div class="wrap hero-inner">
-      <h1 class="ink-text">What changed, and how it fits together.</h1>
+      <p class="eyebrow">The drasticstatic ORG lab</p>
+      <h1 class="ink-text">A lab for ORG's next ideas.</h1>
       <p class="lede">
-        A running record of ORG's sites, from the first home page sketches in May to today, and a map of
-        how the code, the hosting, and the previews connect.
+        The changelog and portfolio of what Christopher builds for the Octagon Religious-Research Group in his
+        lab: the O-R-G dApp preview first, and whatever comes next.
       </p>
       <div class="cta">
-        <a class="oct btn" href={url("changelog")}>Read the changelog</a>
-        <a class="oct btn btn-quiet" href={url("map")}>See the map</a>
+        <a class="oct btn" href={url("changelog")}>Read the lab changelog</a>
+        <a class="oct btn btn-quiet" href={DAPP}>Open the dApp preview</a>
+      </div>
+      <p class="hint arr-hint">Press <kbd>/</kbd> to search this lab and ORG's AstroLog at once. New here? <a href="#welcome" data-arrival-open="guide">Take the welcome tour</a>.</p>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="pointer oct">
+      <i class="ph ph-signpost" aria-hidden="true"></i>
+      <div>
+        <p><strong>Looking for ORG's official changelog?</strong> It's the <a href={ORG_ASTROLOG}>ORG AstroLog</a>, the record for every repository in ORG's own GitHub organization, with a library of how they're built.</p>
+        <p class="muted">This lab records the work that happens outside it. Its earlier entries, from when it was the dApp's sidecar and tracked ORG's sites too, stay here as history.</p>
       </div>
     </div>
   </section>
 
   <section class="wrap latest">
-    <h2>Latest</h2>
+    <h2>Latest in the lab</h2>
     <ol>
       {latest.map((e) => (
         <li>
@@ -39,17 +52,58 @@ const fmt = (d: string) =>
     </ol>
   </section>
 
+  <section class="wrap portfolio" aria-labelledby="in-the-lab">
+    <h2 id="in-the-lab">In the lab</h2>
+    <div class="cards">
+      <a class="oct-card oct" href={DAPP}>
+        <span class="oct-inner oct">
+          <img class="emblem" src={url("art/core.webp")} alt="" width="72" height="72" />
+          <span><strong>O-R-G dApp preview</strong><span class="muted">The octagon made of ORG's art, all three lights, marbled ink you can stir, and a wallet-connect donation flow.</span></span>
+        </span>
+      </a>
+      <div class="oct-card oct next">
+        <span class="oct-inner oct">
+          <span class="emblem next-mark" aria-hidden="true"><i class="ph ph-flask"></i></span>
+          <span><strong>Next in the lab</strong><span class="muted">Placeholder: the next piece Christopher builds for ORG goes here once it has a preview worth sharing.</span></span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap people-block" aria-labelledby="who">
+    <h2 id="who">Who made the changes</h2>
+    <p class="muted">Every entry names who did the work. Pictures come from public GitHub profiles; anyone without one gets an octagon with their initials.</p>
+    <ul class="people">
+      {PEOPLE.map((p) => (
+        <li>
+          <arrival-avatar name={p.name} github={p.github} size={48} />
+          <span class="person">
+            <strong>{p.github ? <a href={`https://github.com/${p.github}`}>{p.name}</a> : p.name}</strong>
+            <span class="muted">{p.role}</span>
+          </span>
+          <span class="muted count">{count(p)} {count(p) === 1 ? "entry" : "entries"}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
   <section class="wrap elsewhere">
-    <a class="oct-card oct" href={DAPP}>
+    <a class="oct-card oct" href={ORG_ASTROLOG}>
       <span class="oct-inner oct">
-        <img class="emblem" src={url("art/core.webp")} alt="" width="72" height="72" />
-        <span><strong>dApp preview</strong><span class="muted">The octagon, three lights, and wallet connect.</span></span>
+        <img class="emblem" src={url("art/infrastructure.webp")} alt="" width="72" height="72" />
+        <span><strong>ORG AstroLog</strong><span class="muted">ORG's official changelog and library.</span></span>
       </span>
     </a>
     <a class="oct-card oct" href={LIVE}>
       <span class="oct-inner oct">
         <img class="emblem" src={url("art/community.webp")} alt="" width="72" height="72" />
         <span><strong>orgspirituality.org</strong><span class="muted">The official site, decided by member vote.</span></span>
+      </span>
+    </a>
+    <a class="oct-card oct" href={ORG_SITE}>
+      <span class="oct-inner oct">
+        <img class="emblem" src={url("art/about.webp")} alt="" width="72" height="72" />
+        <span><strong>ORG on GitHub</strong><span class="muted">ORG's entry portal: nine doors and its AstroLog.</span></span>
       </span>
     </a>
     <a class="oct-card oct" href={PROPOSAL}>
@@ -76,23 +130,39 @@ const fmt = (d: string) =>
       linear-gradient(to bottom, transparent 55%, var(--background) 94%),
       linear-gradient(to right, var(--background) 0%, color-mix(in srgb, var(--background) 80%, transparent) 35%, transparent 80%);
   }
-  .hero-inner { padding-block: clamp(4rem, 12vw, 9rem) clamp(4rem, 10vw, 7rem); }
+  .hero-inner { padding-block: clamp(3.5rem, 11vw, 8rem) clamp(3rem, 8vw, 5rem); }
+  .eyebrow { font: 700 0.78rem/1.2 var(--font-body); letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 1rem; }
   .hero h1 { font-size: clamp(2.6rem, 6.5vw, 5.2rem); line-height: 1.02; max-width: 14ch; }
   .lede { margin-top: 1.5rem; max-width: 36rem; font-size: 1.15rem; color: color-mix(in srgb, var(--foreground) 88%, transparent); }
   .cta { margin-top: 2rem; display: flex; gap: 0.75rem; flex-wrap: wrap; }
-  .latest { padding-block: 3rem; }
-  .latest h2 { font-size: 2.2rem; }
+  .hint { margin-top: 1.25rem; font-size: 0.95rem; color: var(--muted); }
+  .latest { padding-block: 1rem 3rem; }
+  .latest h2, .portfolio h2, .people-block h2 { font-size: 2.2rem; }
   .latest ol { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 2rem; max-width: 46rem; }
   .latest h3 { font-size: 1.35rem; margin-top: 0.2rem; }
   .latest h3 a { color: var(--heading); text-decoration: none; }
   .latest h3 a:hover { color: var(--accent); }
   .latest p { margin-top: 0.35rem; }
   .latest time { font-size: 0.9rem; }
-  .elsewhere { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); padding-block: 2rem 4rem; }
-  .elsewhere a { text-decoration: none; color: var(--foreground); }
-  .elsewhere .oct-inner { display: flex; align-items: center; gap: 1rem; }
-  .elsewhere img { width: 72px; height: 72px; object-fit: cover; flex-shrink: 0; }
-  .elsewhere strong { display: block; font-family: var(--font-heading); font-weight: 400; font-size: 1.2rem; color: var(--heading); }
-  .elsewhere .muted { display: block; font-size: 0.92rem; }
-  .elsewhere a:hover strong { color: var(--accent); }
+  .portfolio { padding-block: 1rem 3rem; }
+  .cards, .elsewhere { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); }
+  .cards { margin-top: 1.5rem; }
+  .cards a, .elsewhere a { text-decoration: none; color: var(--foreground); }
+  .cards .oct-inner, .elsewhere .oct-inner { display: flex; align-items: center; gap: 1rem; }
+  .cards img, .elsewhere img { width: 72px; height: 72px; object-fit: cover; flex-shrink: 0; }
+  .cards strong, .elsewhere strong { display: block; font-family: var(--font-heading); font-variation-settings: var(--heading-settings); font-weight: 400; font-size: 1.2rem; color: var(--heading); }
+  .cards .muted, .elsewhere .muted { display: block; font-size: 0.92rem; }
+  .cards a:hover strong, .elsewhere a:hover strong { color: var(--accent); }
+  .next { background: repeating-linear-gradient(-45deg, var(--border) 0 6px, transparent 6px 12px); }
+  .next-mark { display: grid; place-items: center; width: 72px; height: 72px; flex-shrink: 0; background: var(--surface-muted); color: var(--accent); font-size: 1.8rem; }
+  .people-block { padding-block: 1rem 3rem; max-width: 72rem; }
+  .people-block > p { margin-top: 0.6rem; max-width: 46rem; }
+  .people { list-style: none; padding: 0; margin: 1.25rem 0 0; display: grid; gap: 0.75rem; max-width: 46rem; }
+  .people li { display: grid; grid-template-columns: auto 1fr auto; gap: 1rem; align-items: center; }
+  .person { display: flex; flex-direction: column; }
+  .person strong { font-family: var(--font-heading); font-variation-settings: var(--heading-settings); font-weight: 400; font-size: 1.15rem; color: var(--heading); }
+  .person strong a { color: inherit; text-decoration: none; }
+  .person strong a:hover { color: var(--accent); }
+  .person .muted, .count { font-size: 0.9rem; }
+  .elsewhere { padding-block: 1rem 4rem; }
 </style>
