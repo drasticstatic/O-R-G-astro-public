@@ -22,6 +22,14 @@ const BACKEND = "https://github.com/Octagon-Religious-Research-Group-ORG/org-bac
 export const CHANGELOG: Entry[] = [
   {
     date: "2026-10-12",
+    title: "The dApp preview joins the suite",
+    detail: "The dApp preview now runs on ORG's arrival kit, like this lab and ORG's own sites: the first-visit welcome, the light & motion controls, reading mode, contrast, cursor effects, the welcome guide, / to search, and a count of what's new here since your last visit. A strip at the top links straight to this changelog. The \"three directions\" showcase moved off its home page and into ORG's AstroLog, where Renan's proposal is kept as history; everything else about the dApp works as before.",
+    area: "Preview",
+    who: "drasticstatic with Alfred",
+    link: "https://drasticstatic.github.io/O-R-G-dapp-public-preview/",
+  },
+  {
+    date: "2026-10-12",
     title: "A ledger of every public change, in plain words",
     detail: "A new Ledger page lists every public change to the lab and the dApp preview: tidied into a plain sentence, sorted by kind (look and feel, records, new things, behind the scenes…), grouped by day and site, and linked to the change itself. It's gathered from the public mirrors only and rebuilt every day, and the same daily rebuild redraws the map from ORG's latest copy. ORG's own repositories have their ledger in the ORG AstroLog.",
     area: "Lab",
