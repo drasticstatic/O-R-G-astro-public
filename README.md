@@ -48,6 +48,15 @@ ORG's portal and AstroLog:
 - **Press `/`** to search this lab and ORG's AstroLog at once. **Press `?`** for the welcome guide.
 - Avatars on every entry: GitHub pictures, or ORG's octagon initials.
 
+## 🗺️ One map, two sites
+
+The [map](https://drasticstatic.github.io/O-R-G-astro-public/map) is the same as the
+[ORG AstroLog's](https://octagon-religious-research-group-org.github.io/changelog-astro-public/map).
+Its one canonical copy lives in ORG's `changelog-astro` (`astro/src/data/map.ts`), published as
+`map.json`; this lab fetches it when it builds and draws it with the same `OrgMap` component. If the
+fetch fails, the build uses `src/data/map.snapshot.json` (refresh: `npm run map:snapshot`). To change
+the map, change ORG's copy, then rebuild the lab.
+
 ## 🔒 Private / Public Split
 
 This repo is **private** and is the source of truth. A public sibling,
@@ -76,6 +85,8 @@ Requires Node.js `>=22.12.0`.
 
 ```
 src/data/changelog.ts   the lab's entries (newest first) and who made them
+src/data/map.ts         loads ORG's canonical map (ORG AstroLog /map.json) at build; snapshot fallback
+src/og/                 the arrival kit's social-card generator, ORG's card theme, fonts
 src/pages/              porch (index), changelog, map, 404, search.json
 src/lib/url.ts          the lab's, ORG's and the dApp's addresses, and ORG's arrival kit
 public/                 static assets served as-is

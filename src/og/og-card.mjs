@@ -83,7 +83,8 @@ async function imageData(path, size) {
 }
 
 /**
- * spec: { eyebrow, kicker?, title, summary?, meta?, footer?, lit?, art? (path to a square image) }
+ * spec: { eyebrow, kicker?, title, summary?, meta?, footer?, lit?, art? (path to a square image),
+ *         figure? ({ svg, width, height }: an SVG drawn on the right, e.g. a miniature map) }
  * theme: see THEME_EXAMPLE. base: a file: URL that font/mark/art paths resolve against.
  */
 export async function renderCard(spec, theme = THEME_EXAMPLE, base = new URL(".", import.meta.url)) {
@@ -102,6 +103,10 @@ export async function renderCard(spec, theme = THEME_EXAMPLE, base = new URL("."
     .join(", ");
   const mark = T.mark ? await imageData(new URL(T.mark, base), 128) : null;
   const art = spec.art ? await imageData(new URL(spec.art, base), 500) : null;
+  // figure: { svg, width, height } drawn on the right at that size, e.g. a miniature diagram.
+  const figure = spec.figure
+    ? { src: `data:image/svg+xml;base64,${Buffer.from(spec.figure.svg).toString("base64")}`, width: spec.figure.width, height: spec.figure.height }
+    : null;
 
   const frame =
     T.frame === "perforated"
@@ -138,11 +143,16 @@ export async function renderCard(spec, theme = THEME_EXAMPLE, base = new URL("."
           ]),
           // middle: title, ink bar, summary (+ optional art)
           h("div", { display: "flex", flex: 1, alignItems: "center", marginTop: 18 }, [
-            h("div", { display: "flex", flexDirection: "column", flex: 1, paddingRight: art ? 40 : 0 }, [
+            h("div", { display: "flex", flexDirection: "column", flex: 1, paddingRight: art || figure ? 40 : 0 }, [
               h("div", { fontFamily: head, fontSize: titleSize, lineHeight: 1.08, color: T.heading, letterSpacing: -0.5 }, title),
               h("div", { width: 190, height: 7, marginTop: 26, marginBottom: 22, backgroundImage: `linear-gradient(90deg, ${T.ink.join(", ")})` }, ""),
               spec.summary ? h("div", { fontSize: 27, lineHeight: 1.42, color: T.text, opacity: 0.9 }, clip(spec.summary, title.length > 60 ? 130 : 175)) : null,
             ].filter(Boolean)),
+            figure
+              ? h("div", { display: "flex", padding: 16, backgroundColor: "rgba(255, 255, 255, 0.035)", border: `2px solid ${T.perf}` }, [
+                  { type: "img", props: { src: figure.src, width: figure.width, height: figure.height } },
+                ])
+              : null,
             // Art is shown whole and unmodified (an org's mark may be among it), on a mat that keeps
             // clear space around it, the way ORG's brand guidelines ask.
             art
