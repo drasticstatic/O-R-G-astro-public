@@ -1,0 +1,30 @@
+---
+// GitHub Pages serves this for any missing path under /O-R-G-astro-public, at any depth, so every
+// link here is a full URL. No first-visit splash on a wrong turn; "/" search still works.
+import Base from "../layouts/Base.astro";
+import { LAB, DAPP, ORG_LOG } from "../lib/url";
+---
+<Base title="Not in the lab: drasticstatic ORG lab" description="This address doesn't lead to a page in the lab. The way back is below." splash={false}>
+  <section class="wrap lost">
+    <span class="mark emblem" aria-hidden="true"><i class="ph ph-flask"></i></span>
+    <h1>This experiment isn't in the lab.</h1>
+    <p class="muted">The link may be old, or the page was never built. Nothing is broken on your side.</p>
+    <div class="ways">
+      <a class="oct btn" href={LAB}><i class="ph ph-arrow-left" aria-hidden="true"></i>Back to the lab</a>
+      <button type="button" class="oct btn btn-quiet" data-arrival-open="search"><i class="ph ph-magnifying-glass" aria-hidden="true"></i>Search instead</button>
+    </div>
+    <ul class="more">
+      <li><a href={LAB + "changelog"}>Lab changelog</a></li>
+      <li><a href={DAPP}>dApp preview</a></li>
+      <li><a href={ORG_LOG}>ORG AstroLog, the official record</a></li>
+    </ul>
+  </section>
+</Base>
+
+<style>
+  .lost { padding-block: 5rem 6rem; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+  .mark { display: grid; place-items: center; width: 96px; height: 96px; background: var(--ink); color: var(--background); font-size: 2.6rem; }
+  h1 { font-size: clamp(2rem, 6vw, 3.2rem); max-width: 18ch; }
+  .ways { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-top: 0.5rem; }
+  .more { list-style: none; padding: 0; margin: 1rem 0 0; display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: center; }
+</style>

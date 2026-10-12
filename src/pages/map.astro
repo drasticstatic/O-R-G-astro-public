@@ -21,8 +21,8 @@ const nodes: Node[] = [
 
   { id: "dapp", x: 800, y: 110, name: "O-R-G-dapp", line: "Private source for the dApp preview", private: true },
   { id: "dapppub", x: 800, y: 230, name: "dApp preview", line: "Public copy, on GitHub Pages", href: "https://drasticstatic.github.io/O-R-G-dapp-public-preview/" },
-  { id: "astro", x: 800, y: 360, name: "O-R-G-astro", line: "Private source for this sidecar", private: true },
-  { id: "astropub", x: 800, y: 470, name: "This sidecar", line: "Public copy, on GitHub Pages", href: "https://drasticstatic.github.io/O-R-G-astro-public/" },
+  { id: "astro", x: 800, y: 360, name: "O-R-G-astro", line: "Private source for this lab", private: true },
+  { id: "astropub", x: 800, y: 470, name: "This lab", line: "Public copy, on GitHub Pages", href: "https://drasticstatic.github.io/O-R-G-astro-public/" },
   { id: "renan", x: 800, y: 590, name: "Design directions", line: "Renan's proposal, on Netlify", href: "https://org-new-look.netlify.app/" },
 ];
 
@@ -59,7 +59,7 @@ const chamfer = (n: Node, c = 10) =>
     [n.x + W - c, n.y + H], [n.x + c, n.y + H], [n.x, n.y + H - c], [n.x, n.y + c],
   ].map((p) => p.join(",")).join(" ");
 ---
-<Base title="Map: ORG sidecar" description="How ORG's code, hosting, and previews connect.">
+<Base title="Map: drasticstatic ORG lab" description="How ORG's code, hosting, and the lab's previews connect.">
   <header class="wrap"><div class="head">
     <h1>Map</h1>
     <p class="muted">
@@ -76,8 +76,8 @@ const chamfer = (n: Node, c = 10) =>
           ORG's organization holds org-frontend, deployed to orgspirituality.org on Netlify, and org-backend,
           deployed as an API on Heroku that the site calls. The organization also holds its profile, brand assets,
           and a root page on GitHub Pages. In drasticstatic's account, private sources for the dApp preview and this
-          sidecar each sync public files to a public copy served on GitHub Pages. The dApp preview copies artwork and
-          words from org-frontend, the sidecar uses the brand favicons, and both use the three lights from Renan's
+          lab each sync public files to a public copy served on GitHub Pages. The dApp preview copies artwork and
+          words from org-frontend, the lab uses the brand favicons, and both use the three lights from Renan's
           design proposal.
         </desc>
         <defs>
@@ -91,7 +91,7 @@ const chamfer = (n: Node, c = 10) =>
 
         <text x="40" y="92" class="col">ORG on GitHub</text>
         <text x="420" y="92" class="col">Where it runs</text>
-        <text x="800" y="92" class="col">drasticstatic previews</text>
+        <text x="800" y="92" class="col">drasticstatic ORG lab</text>
 
         {edges.map((e) => (
           <g class={e.soft ? "edge soft" : "edge"}>
