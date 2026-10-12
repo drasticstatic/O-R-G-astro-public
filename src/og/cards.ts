@@ -4,6 +4,8 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { renderCard } from "./og-card.mjs";
 import { ORG_CARD_THEME } from "./theme.mjs";
+import { mapSvg } from "./map-svg.mjs";
+import { loadMap } from "../data/map";
 import { LAB_STARTED, entryId, type Entry } from "../data/changelog";
 import { LAB } from "../lib/url";
 
@@ -37,6 +39,21 @@ export async function entryCard(e: Entry) {
   );
 }
 
-export async function pageCard(spec: { eyebrow: string; kicker?: string; title: string; summary?: string; meta?: string }) {
+export async function pageCard(spec: { eyebrow: string; kicker?: string; title: string; summary?: string; meta?: string; figure?: { svg: string; width: number; height: number } }) {
   return jpeg(await renderCard({ footer: "drasticstatic ORG lab", lit: null, ...spec }, ORG_CARD_THEME, OG_DIR));
+}
+
+export async function mapCard() {
+  const { map } = await loadMap();
+  const svg = mapSvg(map, { accent: "#e9be72", muted: "#b4abc9", border: "#4a4170", node: "#221d3a", heading: "#f4effc" }, "lab");
+  return pageCard(
+      {
+        eyebrow: "drasticstatic ORG lab · Map",
+        kicker: "How it fits together",
+        title: "Map of ORG's sites",
+        summary: "Repositories, where they run, and the previews and proposals around them.",
+        meta: "Drawn from ORG's AstroLog, the map's one home",
+        figure: { svg, width: 520, height: Math.round((520 * (map.height - 20)) / map.width) },
+      }
+  );
 }
