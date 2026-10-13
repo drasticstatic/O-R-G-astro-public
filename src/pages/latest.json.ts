@@ -18,7 +18,7 @@ export async function GET() {
       d: e.date,
       who: e.who,
     })),
-    ...ledgerNewsItems(ledger, { kicker: "lab ledger" }),
+    ...ledgerNewsItems(ledger, { kicker: "lab ledger", ledgerHref: `${LAB}ledger/` }),
   ].sort((a, b) => String(b.ts ?? b.d).localeCompare(String(a.ts ?? a.d)));
   return new Response(JSON.stringify({ updated: new Date().toISOString(), items }), {
     headers: { "Content-Type": "application/json" },

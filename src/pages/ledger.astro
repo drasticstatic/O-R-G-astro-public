@@ -1,8 +1,8 @@
 ---
-// The lab's ledger: every public change to the lab and the dApp preview, in plain words. Gathered at
-// build time from the PUBLIC mirrors on drasticstatic (src/ledger/ledger.mjs, the arrival kit's
-// generator, configured in src/data/ledger.config.mjs). The deploy workflow also runs daily, so it
-// stays fresh. ORG's own repositories have their ledger in the ORG AstroLog.
+// The lab's ledger: every public change to the lab and the dApp preview, in plain words, and the
+// ORG-lane private sources' work shown masked. Gathered at build time (src/ledger/ledger.mjs, the
+// arrival kit's generator v2, configured in src/data/ledger.config.mjs). The deploy workflow also runs
+// daily, so it stays fresh. ORG's own repositories have their ledger in the ORG AstroLog.
 import Base from "../layouts/Base.astro";
 import Ledger from "../components/Ledger.astro";
 import { loadLedger } from "../ledger/ledger.mjs";
@@ -15,13 +15,13 @@ const WEDGES = ["#5a43f0", "#9a4dff", "#d04ce8", "#e65aa8", "#f29a3a", "#e4d548"
 ---
 <Base
   title="Ledger: drasticstatic ORG lab"
-  description="Every public change to the lab and the dApp preview, in plain words, grouped by day and by kind, each linked to the change itself."
+  description="Every public change to the lab and the dApp preview, in plain words, grouped by day and by kind, each linked to the change itself. Private work shows too, masked."
   ogImage={ledgerCardUrl}
   ogAlt="The lab's ledger: every public change to the drasticstatic ORG lab and the dApp preview, in plain words."
 >
   <header class="wrap"><div class="head">
     <h1>Ledger</h1>
-    <p class="muted">Every public change to the lab and the dApp preview, in plain words, for anyone who'd rather not open GitHub. It's gathered from the public mirrors of the lab's repositories and refreshed every day; private work never appears here.</p>
+    <p class="muted">Every public change to the lab and the dApp preview, in plain words, for anyone who'd rather not open GitHub. It's gathered from the public mirrors of the lab's repositories and refreshed every day. Work in the lab's private sources shows too, behind the curtain: the repository, the day and the kind of change, with its words masked (████ ██ ██████) and no link. When an AI helped, its name is on the line below the person's.</p>
     <p class="muted">The <a href={url("changelog/")}>lab changelog</a> tells the story. ORG's own repositories have their ledger in the <a href={`${ORG_LOG}ledger`}>ORG AstroLog</a>.</p>
   </div></header>
   <div class="wrap body">
