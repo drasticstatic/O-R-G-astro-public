@@ -1,15 +1,18 @@
 {
- "version": 1,
+ "version": 2,
  "owner": "drasticstatic",
- "generated": "2026-10-12T19:38:00.706Z",
+ "generated": "2026-10-13T10:45:10.640Z",
  "timeZone": "America/New_York",
- "total": 15,
- "shown": 15,
+ "total": 52,
+ "shown": 34,
+ "shownPublic": 18,
+ "shownPrivate": 16,
  "filtered": {
   "merges": 0,
   "mirrors": 0,
   "bots": 0,
-  "undone": 0
+  "undone": 0,
+  "copies": 18
  },
  "repos": [
   {
@@ -17,63 +20,209 @@
    "label": "The lab",
    "blurb": "This site",
    "url": "https://github.com/drasticstatic/O-R-G-astro-public",
-   "count": 9
+   "private": false,
+   "count": 11
+  },
+  {
+   "name": "O-R-G",
+   "label": "O-R-G (private)",
+   "blurb": "",
+   "url": null,
+   "private": true,
+   "count": 11
   },
   {
    "name": "O-R-G-dapp-public-preview",
    "label": "dApp preview",
    "blurb": "The O-R-G dApp preview",
    "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview",
-   "count": 6
+   "private": false,
+   "count": 7
+  },
+  {
+   "name": "O-R-G-dapp",
+   "label": "The dApp's source",
+   "blurb": "",
+   "url": null,
+   "private": true,
+   "count": 4
+  },
+  {
+   "name": "O-R-G-astro",
+   "label": "The lab's source",
+   "blurb": "",
+   "url": null,
+   "private": true,
+   "count": 1
   }
  ],
  "kinds": [
   {
+   "id": "fix",
+   "name": "Fixes",
+   "icon": "wrench",
+   "count": 1
+  },
+  {
    "id": "look",
    "name": "Look and feel",
    "icon": "palette",
-   "count": 6
+   "count": 7
   },
   {
    "id": "records",
    "name": "Records and docs",
    "icon": "notebook",
-   "count": 5
+   "count": 11
   },
   {
    "id": "under",
    "name": "Behind the scenes",
    "icon": "gear-six",
-   "count": 1
+   "count": 6
   },
   {
    "id": "new",
    "name": "New",
    "icon": "sparkle",
-   "count": 2
+   "count": 3
   },
   {
    "id": "update",
    "name": "Updates",
    "icon": "arrows-clockwise",
-   "count": 1
+   "count": 6
   }
  ],
+ "priorities": [],
  "people": [
   {
-   "name": "Christopher",
+   "name": "Christopher W.",
    "github": "drasticstatic",
-   "count": 15
+   "avatar": "github",
+   "count": 34
   }
  ],
- "first": "2026-09-15",
- "last": "2026-10-12",
+ "first": "2026-09-14",
+ "last": "2026-10-13",
  "months": [
   {
    "key": "2026-10",
    "label": "October 2026",
-   "count": 12,
+   "count": 25,
    "days": [
+    {
+     "date": "2026-10-13",
+     "label": "Tuesday, October 13",
+     "groups": [
+      {
+       "repo": "O-R-G",
+       "label": "O-R-G (private)",
+       "private": true,
+       "items": [
+        {
+         "id": "1ce3fc004ffc",
+         "short": "1ce3fc0",
+         "repo": "O-R-G",
+         "repoLabel": "O-R-G (private)",
+         "private": true,
+         "masked": true,
+         "url": null,
+         "d": "2026-10-13",
+         "time": "6:03 AM",
+         "ts": "2026-10-13T10:03:31Z",
+         "text": "████ ██ ██ ██████ ████ ████ ██████ ██ ████████ ████",
+         "area": "",
+         "kind": {
+          "id": "update",
+          "name": "Updates",
+          "icon": "arrows-clockwise"
+         },
+         "priority": null,
+         "who": {
+          "name": "Christopher W.",
+          "github": "drasticstatic",
+          "avatar": "github",
+          "known": true
+         },
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
+         ]
+        },
+        {
+         "id": "42edcc342c43",
+         "short": "42edcc3",
+         "repo": "O-R-G",
+         "repoLabel": "O-R-G (private)",
+         "private": true,
+         "masked": true,
+         "url": null,
+         "d": "2026-10-13",
+         "time": "5:58 AM",
+         "ts": "2026-10-13T09:58:35Z",
+         "text": "████████ ██████ ██ ██ ████ ██ ████ ██████ ████████ ████████",
+         "area": "",
+         "kind": {
+          "id": "update",
+          "name": "Updates",
+          "icon": "arrows-clockwise"
+         },
+         "priority": null,
+         "who": {
+          "name": "Christopher W.",
+          "github": "drasticstatic",
+          "avatar": "github",
+          "known": true
+         },
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
+         ]
+        },
+        {
+         "id": "bc1975bb50cc",
+         "short": "bc1975b",
+         "repo": "O-R-G",
+         "repoLabel": "O-R-G (private)",
+         "private": true,
+         "masked": true,
+         "url": null,
+         "d": "2026-10-13",
+         "time": "1:36 AM",
+         "ts": "2026-10-13T05:36:24Z",
+         "text": "████████ ██████ ██ ██ ████ ██ ████████ ████████ ██████ ████████",
+         "area": "",
+         "kind": {
+          "id": "update",
+          "name": "Updates",
+          "icon": "arrows-clockwise"
+         },
+         "priority": null,
+         "who": {
+          "name": "Christopher W.",
+          "github": "drasticstatic",
+          "avatar": "github",
+          "known": true
+         },
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
     {
      "date": "2026-10-12",
      "label": "Monday, October 12",
@@ -81,13 +230,84 @@
       {
        "repo": "O-R-G-astro-public",
        "label": "The lab",
+       "private": false,
        "items": [
+        {
+         "id": "e85a6b71b48c",
+         "sha": "e85a6b71b48c6ab74e1e39bba1f674ed18616f6e",
+         "short": "e85a6b7",
+         "repo": "O-R-G-astro-public",
+         "repoLabel": "The lab",
+         "private": false,
+         "masked": false,
+         "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/e85a6b71b48c6ab74e1e39bba1f674ed18616f6e",
+         "d": "2026-10-12",
+         "time": "3:46 PM",
+         "ts": "2026-10-12T19:46:12Z",
+         "text": "The dApp preview joins the suite (ORG's arrival kit, the lab link; directions moved to ORG)",
+         "area": "Lab changelog",
+         "kind": {
+          "id": "update",
+          "name": "Updates",
+          "icon": "arrows-clockwise"
+         },
+         "priority": null,
+         "who": {
+          "name": "Christopher W.",
+          "github": "drasticstatic",
+          "avatar": "github",
+          "known": true
+         },
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
+         ]
+        },
+        {
+         "id": "8f74d4af7f9a",
+         "sha": "8f74d4af7f9ad3d09a1c1fa8e07be0ac7141e25c",
+         "short": "8f74d4a",
+         "repo": "O-R-G-astro-public",
+         "repoLabel": "The lab",
+         "private": false,
+         "masked": false,
+         "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/8f74d4af7f9ad3d09a1c1fa8e07be0ac7141e25c",
+         "d": "2026-10-12",
+         "time": "3:39 PM",
+         "ts": "2026-10-12T19:39:45Z",
+         "text": "A ledger of every public change, reading mode and what's new; daily rebuild",
+         "area": "Lab",
+         "kind": {
+          "id": "records",
+          "name": "Records and docs",
+          "icon": "notebook"
+         },
+         "priority": null,
+         "who": {
+          "name": "Christopher W.",
+          "github": "drasticstatic",
+          "avatar": "github",
+          "known": true
+         },
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
+         ]
+        },
         {
          "id": "b4e84968e4f0",
          "sha": "b4e84968e4f03a0ca413f38362376d946120d6b5",
          "short": "b4e8496",
          "repo": "O-R-G-astro-public",
          "repoLabel": "The lab",
+         "private": false,
+         "masked": false,
          "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/b4e84968e4f03a0ca413f38362376d946120d6b5",
          "d": "2026-10-12",
          "time": "6:05 AM",
@@ -99,13 +319,19 @@
           "name": "Records and docs",
           "icon": "notebook"
          },
+         "priority": null,
          "who": {
-          "name": "Christopher",
+          "name": "Christopher W.",
           "github": "drasticstatic",
+          "avatar": "github",
           "known": true
          },
-         "with": [
-          "Alfred"
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
          ]
         },
         {
@@ -114,6 +340,8 @@
          "short": "a06f2cb",
          "repo": "O-R-G-astro-public",
          "repoLabel": "The lab",
+         "private": false,
+         "masked": false,
          "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/a06f2cb50cf2e8134e706f15ce2f6ffe8515558c",
          "d": "2026-10-12",
          "time": "5:58 AM",
@@ -125,13 +353,19 @@
           "name": "Records and docs",
           "icon": "notebook"
          },
+         "priority": null,
          "who": {
-          "name": "Christopher",
+          "name": "Christopher W.",
           "github": "drasticstatic",
+          "avatar": "github",
           "known": true
          },
-         "with": [
-          "Alfred"
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
          ]
         },
         {
@@ -140,6 +374,8 @@
          "short": "12147ef",
          "repo": "O-R-G-astro-public",
          "repoLabel": "The lab",
+         "private": false,
+         "masked": false,
          "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/12147efde34d660d75e79e8a4b628a228793c8d0",
          "d": "2026-10-12",
          "time": "5:51 AM",
@@ -151,13 +387,19 @@
           "name": "Records and docs",
           "icon": "notebook"
          },
+         "priority": null,
          "who": {
-          "name": "Christopher",
+          "name": "Christopher W.",
           "github": "drasticstatic",
+          "avatar": "github",
           "known": true
          },
-         "with": [
-          "Alfred"
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
          ]
         },
         {
@@ -166,6 +408,8 @@
          "short": "09667c8",
          "repo": "O-R-G-astro-public",
          "repoLabel": "The lab",
+         "private": false,
+         "masked": false,
          "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/09667c8448cadd8cca5157a9ecfdaf2e4fac7d86",
          "d": "2026-10-12",
          "time": "5:48 AM",
@@ -177,13 +421,19 @@
           "name": "Look and feel",
           "icon": "palette"
          },
+         "priority": null,
          "who": {
-          "name": "Christopher",
+          "name": "Christopher W.",
           "github": "drasticstatic",
+          "avatar": "github",
           "known": true
          },
-         "with": [
-          "Alfred"
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
          ]
         },
         {
@@ -192,6 +442,8 @@
          "short": "f3b5205",
          "repo": "O-R-G-astro-public",
          "repoLabel": "The lab",
+         "private": false,
+         "masked": false,
          "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/f3b520564a5268300b555f9c22c2ed2d101506e1",
          "d": "2026-10-12",
          "time": "5:40 AM",
@@ -203,13 +455,19 @@
           "name": "Updates",
           "icon": "arrows-clockwise"
          },
+         "priority": null,
          "who": {
-          "name": "Christopher",
+          "name": "Christopher W.",
           "github": "drasticstatic",
+          "avatar": "github",
           "known": true
          },
-         "with": [
-          "Alfred"
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
          ]
         }
        ]
@@ -217,13 +475,50 @@
       {
        "repo": "O-R-G-dapp-public-preview",
        "label": "dApp preview",
+       "private": false,
        "items": [
+        {
+         "id": "94f2961b2f6d",
+         "sha": "94f2961b2f6d7de2987ca08408f681e447587693",
+         "short": "94f2961",
+         "repo": "O-R-G-dapp-public-preview",
+         "repoLabel": "dApp preview",
+         "private": false,
+         "masked": false,
+         "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/94f2961b2f6d7de2987ca08408f681e447587693",
+         "d": "2026-10-12",
+         "time": "3:45 PM",
+         "ts": "2026-10-12T19:45:07Z",
+         "text": "DApp preview: ORG's arrival kit, a visible link to the lab changelog; the three directions move to ORG",
+         "area": "",
+         "kind": {
+          "id": "records",
+          "name": "Records and docs",
+          "icon": "notebook"
+         },
+         "priority": null,
+         "who": {
+          "name": "Christopher W.",
+          "github": "drasticstatic",
+          "avatar": "github",
+          "known": true
+         },
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
+         ]
+        },
         {
          "id": "53716689ed1c",
          "sha": "53716689ed1c6802583b339e5d61104a8794e36c",
          "short": "5371668",
          "repo": "O-R-G-dapp-public-preview",
          "repoLabel": "dApp preview",
+         "private": false,
+         "masked": false,
          "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/53716689ed1c6802583b339e5d61104a8794e36c",
          "d": "2026-10-12",
          "time": "5:52 AM",
@@ -235,13 +530,59 @@
           "name": "Records and docs",
           "icon": "notebook"
          },
+         "priority": null,
          "who": {
-          "name": "Christopher",
+          "name": "Christopher W.",
           "github": "drasticstatic",
+          "avatar": "github",
           "known": true
          },
-         "with": [
-          "Alfred"
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "repo": "O-R-G",
+       "label": "O-R-G (private)",
+       "private": true,
+       "items": [
+        {
+         "id": "e90201c81076",
+         "short": "e90201c",
+         "repo": "O-R-G",
+         "repoLabel": "O-R-G (private)",
+         "private": true,
+         "masked": true,
+         "url": null,
+         "d": "2026-10-12",
+         "time": "10:35 AM",
+         "ts": "2026-10-12T14:35:51Z",
+         "text": "████████ ██████ ██████ ██████ ██████ ████ ██ ██████ ████████ ████",
+         "area": "",
+         "kind": {
+          "id": "records",
+          "name": "Records and docs",
+          "icon": "notebook"
+         },
+         "priority": null,
+         "who": {
+          "name": "Christopher W.",
+          "github": "drasticstatic",
+          "avatar": "github",
+          "known": true
+         },
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
          ]
         }
        ]
@@ -253,8 +594,82 @@
      "label": "Monday, October 5",
      "groups": [
       {
+       "repo": "O-R-G-dapp",
+       "label": "The dApp's source",
+       "private": true,
+       "items": [
+        {
+         "id": "94295e2bf549",
+         "short": "94295e2",
+         "repo": "O-R-G-dapp",
+         "repoLabel": "The dApp's source",
+         "private": true,
+         "masked": true,
+         "url": null,
+         "d": "2026-10-05",
+         "time": "7:40 PM",
+         "ts": "2026-10-05T23:40:27Z",
+         "text": "████ ██████ ██████ ████ ████ ████████ ████████",
+         "area": "",
+         "kind": {
+          "id": "look",
+          "name": "Look and feel",
+          "icon": "palette"
+         },
+         "priority": null,
+         "who": {
+          "name": "Christopher W.",
+          "github": "drasticstatic",
+          "avatar": "github",
+          "known": true
+         },
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
+         ]
+        },
+        {
+         "id": "ba3bda4ba8fe",
+         "short": "ba3bda4",
+         "repo": "O-R-G-dapp",
+         "repoLabel": "The dApp's source",
+         "private": true,
+         "masked": true,
+         "url": null,
+         "d": "2026-10-05",
+         "time": "6:38 PM",
+         "ts": "2026-10-05T22:38:28Z",
+         "text": "██████ ████████ ██████ ████ ██ ████████",
+         "area": "",
+         "kind": {
+          "id": "under",
+          "name": "Behind the scenes",
+          "icon": "gear-six"
+         },
+         "priority": null,
+         "who": {
+          "name": "Christopher W.",
+          "github": "drasticstatic",
+          "avatar": "github",
+          "known": true
+         },
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
+         ]
+        }
+       ]
+      },
+      {
        "repo": "O-R-G-dapp-public-preview",
        "label": "dApp preview",
+       "private": false,
        "items": [
         {
          "id": "3dfc15d73854",
@@ -262,6 +677,8 @@
          "short": "3dfc15d",
          "repo": "O-R-G-dapp-public-preview",
          "repoLabel": "dApp preview",
+         "private": false,
+         "masked": false,
          "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/3dfc15d7385465fe2c42f30450b65ce17326b8bb",
          "d": "2026-10-05",
          "time": "7:32 PM",
@@ -273,13 +690,19 @@
           "name": "Look and feel",
           "icon": "palette"
          },
+         "priority": null,
          "who": {
-          "name": "Christopher",
+          "name": "Christopher W.",
           "github": "drasticstatic",
+          "avatar": "github",
           "known": true
          },
-         "with": [
-          "Alfred"
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
          ]
         },
         {
@@ -288,6 +711,8 @@
          "short": "a044244",
          "repo": "O-R-G-dapp-public-preview",
          "repoLabel": "dApp preview",
+         "private": false,
+         "masked": false,
          "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/a044244da3d8e72f39243270562fd44942087045",
          "d": "2026-10-05",
          "time": "7:24 PM",
@@ -299,13 +724,19 @@
           "name": "Look and feel",
           "icon": "palette"
          },
+         "priority": null,
          "who": {
-          "name": "Christopher",
+          "name": "Christopher W.",
           "github": "drasticstatic",
+          "avatar": "github",
           "known": true
          },
-         "with": [
-          "Alfred"
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
          ]
         },
         {
@@ -314,6 +745,8 @@
          "short": "eaca3f3",
          "repo": "O-R-G-dapp-public-preview",
          "repoLabel": "dApp preview",
+         "private": false,
+         "masked": false,
          "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/eaca3f354ae3fa118382cd6c15a8bc219844d304",
          "d": "2026-10-05",
          "time": "6:05 PM",
@@ -325,12 +758,20 @@
           "name": "Look and feel",
           "icon": "palette"
          },
+         "priority": null,
          "who": {
-          "name": "Christopher",
+          "name": "Christopher W.",
           "github": "drasticstatic",
+          "avatar": "github",
           "known": true
          },
-         "with": []
+         "agents": [
+          {
+           "name": "Claude",
+           "tool": "Claude Code",
+           "label": "Claude Code"
+          }
+         ]
         },
         {
          "id": "d6da568cd2b6",
@@ -338,6 +779,8 @@
          "short": "d6da568",
          "repo": "O-R-G-dapp-public-preview",
          "repoLabel": "dApp preview",
+         "private": false,
+         "masked": false,
          "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/d6da568cd2b6436a7f909559b05ad7aa558872be",
          "d": "2026-10-05",
          "time": "5:31 PM",
@@ -349,18 +792,27 @@
           "name": "Behind the scenes",
           "icon": "gear-six"
          },
+         "priority": null,
          "who": {
-          "name": "Christopher",
+          "name": "Christopher W.",
           "github": "drasticstatic",
+          "avatar": "github",
           "known": true
          },
-         "with": []
+         "agents": [
+          {
+           "name": "Claude",
+           "tool": "Claude Code",
+           "label": "Claude Code"
+          }
+         ]
         }
        ]
       },
       {
        "repo": "O-R-G-astro-public",
        "label": "The lab",
+       "private": false,
        "items": [
         {
          "id": "01524ef9099d",
@@ -368,6 +820,8 @@
          "short": "01524ef",
          "repo": "O-R-G-astro-public",
          "repoLabel": "The lab",
+         "private": false,
+         "masked": false,
          "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/01524ef9099d8d6be3372f59be942c235c9a1d71",
          "d": "2026-10-05",
          "time": "7:31 PM",
@@ -379,13 +833,19 @@
           "name": "Look and feel",
           "icon": "palette"
          },
+         "priority": null,
          "who": {
-          "name": "Christopher",
+          "name": "Christopher W.",
           "github": "drasticstatic",
+          "avatar": "github",
           "known": true
          },
-         "with": [
-          "Alfred"
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
          ]
         },
         {
@@ -394,6 +854,8 @@
          "short": "e734274",
          "repo": "O-R-G-astro-public",
          "repoLabel": "The lab",
+         "private": false,
+         "masked": false,
          "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/e734274a43d1f7438c5ca0bd52ffaa28a4241254",
          "d": "2026-10-05",
          "time": "6:05 PM",
@@ -405,12 +867,166 @@
           "name": "Look and feel",
           "icon": "palette"
          },
+         "priority": null,
          "who": {
-          "name": "Christopher",
+          "name": "Christopher W.",
           "github": "drasticstatic",
+          "avatar": "github",
           "known": true
          },
-         "with": []
+         "agents": [
+          {
+           "name": "Claude",
+           "tool": "Claude Code",
+           "label": "Claude Code"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "repo": "O-R-G-astro",
+       "label": "The lab's source",
+       "private": true,
+       "items": [
+        {
+         "id": "e03105051620",
+         "short": "e031050",
+         "repo": "O-R-G-astro",
+         "repoLabel": "The lab's source",
+         "private": true,
+         "masked": true,
+         "url": null,
+         "d": "2026-10-05",
+         "time": "6:38 PM",
+         "ts": "2026-10-05T22:38:33Z",
+         "text": "██████ ████████ ██████ ████ ██ ████████",
+         "area": "",
+         "kind": {
+          "id": "under",
+          "name": "Behind the scenes",
+          "icon": "gear-six"
+         },
+         "priority": null,
+         "who": {
+          "name": "Christopher W.",
+          "github": "drasticstatic",
+          "avatar": "github",
+          "known": true
+         },
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "repo": "O-R-G",
+       "label": "O-R-G (private)",
+       "private": true,
+       "items": [
+        {
+         "id": "05d8ac720484",
+         "short": "05d8ac7",
+         "repo": "O-R-G",
+         "repoLabel": "O-R-G (private)",
+         "private": true,
+         "masked": true,
+         "url": null,
+         "d": "2026-10-05",
+         "time": "6:06 PM",
+         "ts": "2026-10-05T22:06:07Z",
+         "text": "████ ████ ██████ ████ ████████ ████ ██ ████ ████████ ██████",
+         "area": "",
+         "kind": {
+          "id": "records",
+          "name": "Records and docs",
+          "icon": "notebook"
+         },
+         "priority": null,
+         "who": {
+          "name": "Christopher W.",
+          "github": "drasticstatic",
+          "avatar": "github",
+          "known": true
+         },
+         "agents": [
+          {
+           "name": "Claude",
+           "tool": "Claude Code",
+           "label": "Claude Code"
+          }
+         ]
+        },
+        {
+         "id": "7f97bfda25e6",
+         "short": "7f97bfd",
+         "repo": "O-R-G",
+         "repoLabel": "O-R-G (private)",
+         "private": true,
+         "masked": true,
+         "url": null,
+         "d": "2026-10-05",
+         "time": "5:28 PM",
+         "ts": "2026-10-05T21:28:21Z",
+         "text": "████████ ██████ ████████ ████ ████████ ████ ██████",
+         "area": "",
+         "kind": {
+          "id": "update",
+          "name": "Updates",
+          "icon": "arrows-clockwise"
+         },
+         "priority": null,
+         "who": {
+          "name": "Christopher W.",
+          "github": "drasticstatic",
+          "avatar": "github",
+          "known": true
+         },
+         "agents": [
+          {
+           "name": "Claude",
+           "tool": "Claude Code",
+           "label": "Claude Code"
+          }
+         ]
+        },
+        {
+         "id": "3094aab366fe",
+         "short": "3094aab",
+         "repo": "O-R-G",
+         "repoLabel": "O-R-G (private)",
+         "private": true,
+         "masked": true,
+         "url": null,
+         "d": "2026-10-05",
+         "time": "5:26 PM",
+         "ts": "2026-10-05T21:26:22Z",
+         "text": "████ ████ ████████ ████████ ████ ████ ████ ██████ ██ ██████",
+         "area": "",
+         "kind": {
+          "id": "records",
+          "name": "Records and docs",
+          "icon": "notebook"
+         },
+         "priority": null,
+         "who": {
+          "name": "Christopher W.",
+          "github": "drasticstatic",
+          "avatar": "github",
+          "known": true
+         },
+         "agents": [
+          {
+           "name": "Claude",
+           "tool": "Claude Code",
+           "label": "Claude Code"
+          }
+         ]
         }
        ]
       }
@@ -421,7 +1037,7 @@
   {
    "key": "2026-09",
    "label": "September 2026",
-   "count": 3,
+   "count": 9,
    "days": [
     {
      "date": "2026-09-23",
@@ -430,6 +1046,7 @@
       {
        "repo": "O-R-G-astro-public",
        "label": "The lab",
+       "private": false,
        "items": [
         {
          "id": "cda97da939b9",
@@ -437,6 +1054,8 @@
          "short": "cda97da",
          "repo": "O-R-G-astro-public",
          "repoLabel": "The lab",
+         "private": false,
+         "masked": false,
          "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/cda97da939b9a04d0f52a14a07e29c00cb1fd28e",
          "d": "2026-09-23",
          "time": "8:25 PM",
@@ -448,13 +1067,65 @@
           "name": "Records and docs",
           "icon": "notebook"
          },
+         "priority": null,
          "who": {
-          "name": "Christopher",
+          "name": "Christopher W.",
           "github": "drasticstatic",
+          "avatar": "github",
           "known": true
          },
-         "with": [
-          "Alfred"
+         "agents": [
+          {
+           "name": "Alfred",
+           "tool": "Claude Code",
+           "label": "Alfred · Claude Code"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2026-09-22",
+     "label": "Tuesday, September 22",
+     "groups": [
+      {
+       "repo": "O-R-G",
+       "label": "O-R-G (private)",
+       "private": true,
+       "items": [
+        {
+         "id": "24a67d646797",
+         "short": "24a67d6",
+         "repo": "O-R-G",
+         "repoLabel": "O-R-G (private)",
+         "private": true,
+         "masked": true,
+         "url": null,
+         "d": "2026-09-22",
+         "time": "8:28 AM",
+         "ts": "2026-09-22T12:28:10Z",
+         "text": "██████ ██████ ████████ ██████ ████ ████████",
+         "area": "",
+         "kind": {
+          "id": "under",
+          "name": "Behind the scenes",
+          "icon": "gear-six"
+         },
+         "priority": null,
+         "who": {
+          "name": "Christopher W.",
+          "github": "drasticstatic",
+          "avatar": "github",
+          "known": true
+         },
+         "agents": [
+          {
+           "name": "Mystarch",
+           "tool": "Claude Code",
+           "label": "Mystarch · Claude Code"
+          }
          ]
         }
        ]
@@ -466,8 +1137,155 @@
      "label": "Tuesday, September 15",
      "groups": [
       {
+       "repo": "O-R-G-dapp",
+       "label": "The dApp's source",
+       "private": true,
+       "items": [
+        {
+         "id": "7c9bac39e66a",
+         "short": "7c9bac3",
+         "repo": "O-R-G-dapp",
+         "repoLabel": "The dApp's source",
+         "private": true,
+         "masked": true,
+         "url": null,
+         "d": "2026-09-15",
+         "time": "9:56 AM",
+         "ts": "2026-09-15T13:56:07Z",
+         "text": "████ ██ ████████ ████ ██ ████████ ████████ ████ ██ ████████",
+         "area": "",
+         "kind": {
+          "id": "fix",
+          "name": "Fixes",
+          "icon": "wrench"
+         },
+         "priority": null,
+         "who": {
+          "name": "Christopher W.",
+          "github": "drasticstatic",
+          "avatar": "github",
+          "known": true
+         },
+         "agents": [
+          {
+           "name": "Claude",
+           "tool": "Claude Code",
+           "label": "Claude Code"
+          }
+         ]
+        },
+        {
+         "id": "06051007d2bf",
+         "short": "0605100",
+         "repo": "O-R-G-dapp",
+         "repoLabel": "The dApp's source",
+         "private": true,
+         "masked": true,
+         "url": null,
+         "d": "2026-09-15",
+         "time": "9:47 AM",
+         "ts": "2026-09-15T13:47:42Z",
+         "text": "████ ██████ ██████ ██████ ████████ ████ ████ ██████ ████████",
+         "area": "",
+         "kind": {
+          "id": "under",
+          "name": "Behind the scenes",
+          "icon": "gear-six"
+         },
+         "priority": null,
+         "who": {
+          "name": "Christopher W.",
+          "github": "drasticstatic",
+          "avatar": "github",
+          "known": true
+         },
+         "agents": [
+          {
+           "name": "Claude",
+           "tool": "Claude Code",
+           "label": "Claude Code"
+          }
+         ]
+        }
+       ]
+      },
+      {
+       "repo": "O-R-G",
+       "label": "O-R-G (private)",
+       "private": true,
+       "items": [
+        {
+         "id": "3f8546379709",
+         "short": "3f85463",
+         "repo": "O-R-G",
+         "repoLabel": "O-R-G (private)",
+         "private": true,
+         "masked": true,
+         "url": null,
+         "d": "2026-09-15",
+         "time": "9:53 AM",
+         "ts": "2026-09-15T13:53:57Z",
+         "text": "██████ ██████ ██████ ████████ ██████ ████████ ██ ████████ ██ ████████",
+         "area": "",
+         "kind": {
+          "id": "records",
+          "name": "Records and docs",
+          "icon": "notebook"
+         },
+         "priority": null,
+         "who": {
+          "name": "Christopher W.",
+          "github": "drasticstatic",
+          "avatar": "github",
+          "known": true
+         },
+         "agents": [
+          {
+           "name": "Claude",
+           "tool": "Claude Code",
+           "label": "Claude Code"
+          }
+         ]
+        },
+        {
+         "id": "3a344cd2ea5e",
+         "short": "3a344cd",
+         "repo": "O-R-G",
+         "repoLabel": "O-R-G (private)",
+         "private": true,
+         "masked": true,
+         "url": null,
+         "d": "2026-09-15",
+         "time": "8:28 AM",
+         "ts": "2026-09-15T12:28:33Z",
+         "text": "████ ████████ ██ ████████",
+         "area": "",
+         "kind": {
+          "id": "new",
+          "name": "New",
+          "icon": "sparkle"
+         },
+         "priority": null,
+         "who": {
+          "name": "Christopher W.",
+          "github": "drasticstatic",
+          "avatar": "github",
+          "known": true
+         },
+         "agents": [
+          {
+           "name": "Mystarch",
+           "tool": "Claude Code",
+           "label": "Mystarch · Claude Code"
+          }
+         ]
+        }
+       ]
+      },
+      {
        "repo": "O-R-G-astro-public",
        "label": "The lab",
+       "private": false,
        "items": [
         {
          "id": "31edfacbe149",
@@ -475,6 +1293,8 @@
          "short": "31edfac",
          "repo": "O-R-G-astro-public",
          "repoLabel": "The lab",
+         "private": false,
+         "masked": false,
          "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/31edfacbe149b74072825894e361ba03f71b83b6",
          "d": "2026-09-15",
          "time": "9:51 AM",
@@ -482,22 +1302,31 @@
          "text": "Scaffold O-R-G-astro: sidecar site, mirroring gratitude-token-project_astro",
          "area": "",
          "kind": {
-          "id": "new",
-          "name": "New",
-          "icon": "sparkle"
+          "id": "under",
+          "name": "Behind the scenes",
+          "icon": "gear-six"
          },
+         "priority": null,
          "who": {
-          "name": "Christopher",
+          "name": "Christopher W.",
           "github": "drasticstatic",
+          "avatar": "github",
           "known": true
          },
-         "with": []
+         "agents": [
+          {
+           "name": "Claude",
+           "tool": "Claude Code",
+           "label": "Claude Code"
+          }
+         ]
         }
        ]
       },
       {
        "repo": "O-R-G-dapp-public-preview",
        "label": "dApp preview",
+       "private": false,
        "items": [
         {
          "id": "3d600976c811",
@@ -505,6 +1334,8 @@
          "short": "3d60097",
          "repo": "O-R-G-dapp-public-preview",
          "repoLabel": "dApp preview",
+         "private": false,
+         "masked": false,
          "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/3d600976c811d22a467003f9e38feb5c6afa1193",
          "d": "2026-09-15",
          "time": "9:45 AM",
@@ -516,12 +1347,66 @@
           "name": "New",
           "icon": "sparkle"
          },
+         "priority": null,
          "who": {
-          "name": "Christopher",
+          "name": "Christopher W.",
           "github": "drasticstatic",
+          "avatar": "github",
           "known": true
          },
-         "with": []
+         "agents": [
+          {
+           "name": "Claude",
+           "tool": "Claude Code",
+           "label": "Claude Code"
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2026-09-14",
+     "label": "Monday, September 14",
+     "groups": [
+      {
+       "repo": "O-R-G",
+       "label": "O-R-G (private)",
+       "private": true,
+       "items": [
+        {
+         "id": "e3a19f5178dd",
+         "short": "e3a19f5",
+         "repo": "O-R-G",
+         "repoLabel": "O-R-G (private)",
+         "private": true,
+         "masked": true,
+         "url": null,
+         "d": "2026-09-14",
+         "time": "6:20 PM",
+         "ts": "2026-09-14T22:20:51Z",
+         "text": "████████ ████████ ██████ ████████ ████████ ████ ██████",
+         "area": "",
+         "kind": {
+          "id": "new",
+          "name": "New",
+          "icon": "sparkle"
+         },
+         "priority": null,
+         "who": {
+          "name": "Christopher W.",
+          "github": "drasticstatic",
+          "avatar": "github",
+          "known": true
+         },
+         "agents": [
+          {
+           "name": "Mystarch",
+           "tool": "Claude Code",
+           "label": "Mystarch · Claude Code"
+          }
+         ]
         }
        ]
       }
@@ -532,11 +1417,247 @@
  ],
  "items": [
   {
+   "id": "1ce3fc004ffc",
+   "short": "1ce3fc0",
+   "repo": "O-R-G",
+   "repoLabel": "O-R-G (private)",
+   "private": true,
+   "masked": true,
+   "url": null,
+   "d": "2026-10-13",
+   "time": "6:03 AM",
+   "ts": "2026-10-13T10:03:31Z",
+   "text": "████ ██ ██ ██████ ████ ████ ██████ ██ ████████ ████",
+   "area": "",
+   "kind": {
+    "id": "update",
+    "name": "Updates",
+    "icon": "arrows-clockwise"
+   },
+   "priority": null,
+   "who": {
+    "name": "Christopher W.",
+    "github": "drasticstatic",
+    "avatar": "github",
+    "known": true
+   },
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
+   ]
+  },
+  {
+   "id": "42edcc342c43",
+   "short": "42edcc3",
+   "repo": "O-R-G",
+   "repoLabel": "O-R-G (private)",
+   "private": true,
+   "masked": true,
+   "url": null,
+   "d": "2026-10-13",
+   "time": "5:58 AM",
+   "ts": "2026-10-13T09:58:35Z",
+   "text": "████████ ██████ ██ ██ ████ ██ ████ ██████ ████████ ████████",
+   "area": "",
+   "kind": {
+    "id": "update",
+    "name": "Updates",
+    "icon": "arrows-clockwise"
+   },
+   "priority": null,
+   "who": {
+    "name": "Christopher W.",
+    "github": "drasticstatic",
+    "avatar": "github",
+    "known": true
+   },
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
+   ]
+  },
+  {
+   "id": "bc1975bb50cc",
+   "short": "bc1975b",
+   "repo": "O-R-G",
+   "repoLabel": "O-R-G (private)",
+   "private": true,
+   "masked": true,
+   "url": null,
+   "d": "2026-10-13",
+   "time": "1:36 AM",
+   "ts": "2026-10-13T05:36:24Z",
+   "text": "████████ ██████ ██ ██ ████ ██ ████████ ████████ ██████ ████████",
+   "area": "",
+   "kind": {
+    "id": "update",
+    "name": "Updates",
+    "icon": "arrows-clockwise"
+   },
+   "priority": null,
+   "who": {
+    "name": "Christopher W.",
+    "github": "drasticstatic",
+    "avatar": "github",
+    "known": true
+   },
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
+   ]
+  },
+  {
+   "id": "e85a6b71b48c",
+   "sha": "e85a6b71b48c6ab74e1e39bba1f674ed18616f6e",
+   "short": "e85a6b7",
+   "repo": "O-R-G-astro-public",
+   "repoLabel": "The lab",
+   "private": false,
+   "masked": false,
+   "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/e85a6b71b48c6ab74e1e39bba1f674ed18616f6e",
+   "d": "2026-10-12",
+   "time": "3:46 PM",
+   "ts": "2026-10-12T19:46:12Z",
+   "text": "The dApp preview joins the suite (ORG's arrival kit, the lab link; directions moved to ORG)",
+   "area": "Lab changelog",
+   "kind": {
+    "id": "update",
+    "name": "Updates",
+    "icon": "arrows-clockwise"
+   },
+   "priority": null,
+   "who": {
+    "name": "Christopher W.",
+    "github": "drasticstatic",
+    "avatar": "github",
+    "known": true
+   },
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
+   ]
+  },
+  {
+   "id": "94f2961b2f6d",
+   "sha": "94f2961b2f6d7de2987ca08408f681e447587693",
+   "short": "94f2961",
+   "repo": "O-R-G-dapp-public-preview",
+   "repoLabel": "dApp preview",
+   "private": false,
+   "masked": false,
+   "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/94f2961b2f6d7de2987ca08408f681e447587693",
+   "d": "2026-10-12",
+   "time": "3:45 PM",
+   "ts": "2026-10-12T19:45:07Z",
+   "text": "DApp preview: ORG's arrival kit, a visible link to the lab changelog; the three directions move to ORG",
+   "area": "",
+   "kind": {
+    "id": "records",
+    "name": "Records and docs",
+    "icon": "notebook"
+   },
+   "priority": null,
+   "who": {
+    "name": "Christopher W.",
+    "github": "drasticstatic",
+    "avatar": "github",
+    "known": true
+   },
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
+   ]
+  },
+  {
+   "id": "8f74d4af7f9a",
+   "sha": "8f74d4af7f9ad3d09a1c1fa8e07be0ac7141e25c",
+   "short": "8f74d4a",
+   "repo": "O-R-G-astro-public",
+   "repoLabel": "The lab",
+   "private": false,
+   "masked": false,
+   "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/8f74d4af7f9ad3d09a1c1fa8e07be0ac7141e25c",
+   "d": "2026-10-12",
+   "time": "3:39 PM",
+   "ts": "2026-10-12T19:39:45Z",
+   "text": "A ledger of every public change, reading mode and what's new; daily rebuild",
+   "area": "Lab",
+   "kind": {
+    "id": "records",
+    "name": "Records and docs",
+    "icon": "notebook"
+   },
+   "priority": null,
+   "who": {
+    "name": "Christopher W.",
+    "github": "drasticstatic",
+    "avatar": "github",
+    "known": true
+   },
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
+   ]
+  },
+  {
+   "id": "e90201c81076",
+   "short": "e90201c",
+   "repo": "O-R-G",
+   "repoLabel": "O-R-G (private)",
+   "private": true,
+   "masked": true,
+   "url": null,
+   "d": "2026-10-12",
+   "time": "10:35 AM",
+   "ts": "2026-10-12T14:35:51Z",
+   "text": "████████ ██████ ██████ ██████ ██████ ████ ██ ██████ ████████ ████",
+   "area": "",
+   "kind": {
+    "id": "records",
+    "name": "Records and docs",
+    "icon": "notebook"
+   },
+   "priority": null,
+   "who": {
+    "name": "Christopher W.",
+    "github": "drasticstatic",
+    "avatar": "github",
+    "known": true
+   },
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
+   ]
+  },
+  {
    "id": "b4e84968e4f0",
    "sha": "b4e84968e4f03a0ca413f38362376d946120d6b5",
    "short": "b4e8496",
    "repo": "O-R-G-astro-public",
    "repoLabel": "The lab",
+   "private": false,
+   "masked": false,
    "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/b4e84968e4f03a0ca413f38362376d946120d6b5",
    "d": "2026-10-12",
    "time": "6:05 AM",
@@ -548,13 +1669,19 @@
     "name": "Records and docs",
     "icon": "notebook"
    },
+   "priority": null,
    "who": {
-    "name": "Christopher",
+    "name": "Christopher W.",
     "github": "drasticstatic",
+    "avatar": "github",
     "known": true
    },
-   "with": [
-    "Alfred"
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
    ]
   },
   {
@@ -563,6 +1690,8 @@
    "short": "a06f2cb",
    "repo": "O-R-G-astro-public",
    "repoLabel": "The lab",
+   "private": false,
+   "masked": false,
    "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/a06f2cb50cf2e8134e706f15ce2f6ffe8515558c",
    "d": "2026-10-12",
    "time": "5:58 AM",
@@ -574,13 +1703,19 @@
     "name": "Records and docs",
     "icon": "notebook"
    },
+   "priority": null,
    "who": {
-    "name": "Christopher",
+    "name": "Christopher W.",
     "github": "drasticstatic",
+    "avatar": "github",
     "known": true
    },
-   "with": [
-    "Alfred"
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
    ]
   },
   {
@@ -589,6 +1724,8 @@
    "short": "5371668",
    "repo": "O-R-G-dapp-public-preview",
    "repoLabel": "dApp preview",
+   "private": false,
+   "masked": false,
    "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/53716689ed1c6802583b339e5d61104a8794e36c",
    "d": "2026-10-12",
    "time": "5:52 AM",
@@ -600,13 +1737,19 @@
     "name": "Records and docs",
     "icon": "notebook"
    },
+   "priority": null,
    "who": {
-    "name": "Christopher",
+    "name": "Christopher W.",
     "github": "drasticstatic",
+    "avatar": "github",
     "known": true
    },
-   "with": [
-    "Alfred"
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
    ]
   },
   {
@@ -615,6 +1758,8 @@
    "short": "12147ef",
    "repo": "O-R-G-astro-public",
    "repoLabel": "The lab",
+   "private": false,
+   "masked": false,
    "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/12147efde34d660d75e79e8a4b628a228793c8d0",
    "d": "2026-10-12",
    "time": "5:51 AM",
@@ -626,13 +1771,19 @@
     "name": "Records and docs",
     "icon": "notebook"
    },
+   "priority": null,
    "who": {
-    "name": "Christopher",
+    "name": "Christopher W.",
     "github": "drasticstatic",
+    "avatar": "github",
     "known": true
    },
-   "with": [
-    "Alfred"
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
    ]
   },
   {
@@ -641,6 +1792,8 @@
    "short": "09667c8",
    "repo": "O-R-G-astro-public",
    "repoLabel": "The lab",
+   "private": false,
+   "masked": false,
    "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/09667c8448cadd8cca5157a9ecfdaf2e4fac7d86",
    "d": "2026-10-12",
    "time": "5:48 AM",
@@ -652,13 +1805,19 @@
     "name": "Look and feel",
     "icon": "palette"
    },
+   "priority": null,
    "who": {
-    "name": "Christopher",
+    "name": "Christopher W.",
     "github": "drasticstatic",
+    "avatar": "github",
     "known": true
    },
-   "with": [
-    "Alfred"
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
    ]
   },
   {
@@ -667,6 +1826,8 @@
    "short": "f3b5205",
    "repo": "O-R-G-astro-public",
    "repoLabel": "The lab",
+   "private": false,
+   "masked": false,
    "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/f3b520564a5268300b555f9c22c2ed2d101506e1",
    "d": "2026-10-12",
    "time": "5:40 AM",
@@ -678,13 +1839,52 @@
     "name": "Updates",
     "icon": "arrows-clockwise"
    },
+   "priority": null,
    "who": {
-    "name": "Christopher",
+    "name": "Christopher W.",
     "github": "drasticstatic",
+    "avatar": "github",
     "known": true
    },
-   "with": [
-    "Alfred"
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
+   ]
+  },
+  {
+   "id": "94295e2bf549",
+   "short": "94295e2",
+   "repo": "O-R-G-dapp",
+   "repoLabel": "The dApp's source",
+   "private": true,
+   "masked": true,
+   "url": null,
+   "d": "2026-10-05",
+   "time": "7:40 PM",
+   "ts": "2026-10-05T23:40:27Z",
+   "text": "████ ██████ ██████ ████ ████ ████████ ████████",
+   "area": "",
+   "kind": {
+    "id": "look",
+    "name": "Look and feel",
+    "icon": "palette"
+   },
+   "priority": null,
+   "who": {
+    "name": "Christopher W.",
+    "github": "drasticstatic",
+    "avatar": "github",
+    "known": true
+   },
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
    ]
   },
   {
@@ -693,6 +1893,8 @@
    "short": "3dfc15d",
    "repo": "O-R-G-dapp-public-preview",
    "repoLabel": "dApp preview",
+   "private": false,
+   "masked": false,
    "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/3dfc15d7385465fe2c42f30450b65ce17326b8bb",
    "d": "2026-10-05",
    "time": "7:32 PM",
@@ -704,13 +1906,19 @@
     "name": "Look and feel",
     "icon": "palette"
    },
+   "priority": null,
    "who": {
-    "name": "Christopher",
+    "name": "Christopher W.",
     "github": "drasticstatic",
+    "avatar": "github",
     "known": true
    },
-   "with": [
-    "Alfred"
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
    ]
   },
   {
@@ -719,6 +1927,8 @@
    "short": "01524ef",
    "repo": "O-R-G-astro-public",
    "repoLabel": "The lab",
+   "private": false,
+   "masked": false,
    "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/01524ef9099d8d6be3372f59be942c235c9a1d71",
    "d": "2026-10-05",
    "time": "7:31 PM",
@@ -730,13 +1940,19 @@
     "name": "Look and feel",
     "icon": "palette"
    },
+   "priority": null,
    "who": {
-    "name": "Christopher",
+    "name": "Christopher W.",
     "github": "drasticstatic",
+    "avatar": "github",
     "known": true
    },
-   "with": [
-    "Alfred"
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
    ]
   },
   {
@@ -745,6 +1961,8 @@
    "short": "a044244",
    "repo": "O-R-G-dapp-public-preview",
    "repoLabel": "dApp preview",
+   "private": false,
+   "masked": false,
    "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/a044244da3d8e72f39243270562fd44942087045",
    "d": "2026-10-05",
    "time": "7:24 PM",
@@ -756,13 +1974,118 @@
     "name": "Look and feel",
     "icon": "palette"
    },
+   "priority": null,
    "who": {
-    "name": "Christopher",
+    "name": "Christopher W.",
     "github": "drasticstatic",
+    "avatar": "github",
     "known": true
    },
-   "with": [
-    "Alfred"
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
+   ]
+  },
+  {
+   "id": "e03105051620",
+   "short": "e031050",
+   "repo": "O-R-G-astro",
+   "repoLabel": "The lab's source",
+   "private": true,
+   "masked": true,
+   "url": null,
+   "d": "2026-10-05",
+   "time": "6:38 PM",
+   "ts": "2026-10-05T22:38:33Z",
+   "text": "██████ ████████ ██████ ████ ██ ████████",
+   "area": "",
+   "kind": {
+    "id": "under",
+    "name": "Behind the scenes",
+    "icon": "gear-six"
+   },
+   "priority": null,
+   "who": {
+    "name": "Christopher W.",
+    "github": "drasticstatic",
+    "avatar": "github",
+    "known": true
+   },
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
+   ]
+  },
+  {
+   "id": "ba3bda4ba8fe",
+   "short": "ba3bda4",
+   "repo": "O-R-G-dapp",
+   "repoLabel": "The dApp's source",
+   "private": true,
+   "masked": true,
+   "url": null,
+   "d": "2026-10-05",
+   "time": "6:38 PM",
+   "ts": "2026-10-05T22:38:28Z",
+   "text": "██████ ████████ ██████ ████ ██ ████████",
+   "area": "",
+   "kind": {
+    "id": "under",
+    "name": "Behind the scenes",
+    "icon": "gear-six"
+   },
+   "priority": null,
+   "who": {
+    "name": "Christopher W.",
+    "github": "drasticstatic",
+    "avatar": "github",
+    "known": true
+   },
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
+   ]
+  },
+  {
+   "id": "05d8ac720484",
+   "short": "05d8ac7",
+   "repo": "O-R-G",
+   "repoLabel": "O-R-G (private)",
+   "private": true,
+   "masked": true,
+   "url": null,
+   "d": "2026-10-05",
+   "time": "6:06 PM",
+   "ts": "2026-10-05T22:06:07Z",
+   "text": "████ ████ ██████ ████ ████████ ████ ██ ████ ████████ ██████",
+   "area": "",
+   "kind": {
+    "id": "records",
+    "name": "Records and docs",
+    "icon": "notebook"
+   },
+   "priority": null,
+   "who": {
+    "name": "Christopher W.",
+    "github": "drasticstatic",
+    "avatar": "github",
+    "known": true
+   },
+   "agents": [
+    {
+     "name": "Claude",
+     "tool": "Claude Code",
+     "label": "Claude Code"
+    }
    ]
   },
   {
@@ -771,6 +2094,8 @@
    "short": "eaca3f3",
    "repo": "O-R-G-dapp-public-preview",
    "repoLabel": "dApp preview",
+   "private": false,
+   "masked": false,
    "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/eaca3f354ae3fa118382cd6c15a8bc219844d304",
    "d": "2026-10-05",
    "time": "6:05 PM",
@@ -782,12 +2107,20 @@
     "name": "Look and feel",
     "icon": "palette"
    },
+   "priority": null,
    "who": {
-    "name": "Christopher",
+    "name": "Christopher W.",
     "github": "drasticstatic",
+    "avatar": "github",
     "known": true
    },
-   "with": []
+   "agents": [
+    {
+     "name": "Claude",
+     "tool": "Claude Code",
+     "label": "Claude Code"
+    }
+   ]
   },
   {
    "id": "e734274a43d1",
@@ -795,6 +2128,8 @@
    "short": "e734274",
    "repo": "O-R-G-astro-public",
    "repoLabel": "The lab",
+   "private": false,
+   "masked": false,
    "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/e734274a43d1f7438c5ca0bd52ffaa28a4241254",
    "d": "2026-10-05",
    "time": "6:05 PM",
@@ -806,12 +2141,20 @@
     "name": "Look and feel",
     "icon": "palette"
    },
+   "priority": null,
    "who": {
-    "name": "Christopher",
+    "name": "Christopher W.",
     "github": "drasticstatic",
+    "avatar": "github",
     "known": true
    },
-   "with": []
+   "agents": [
+    {
+     "name": "Claude",
+     "tool": "Claude Code",
+     "label": "Claude Code"
+    }
+   ]
   },
   {
    "id": "d6da568cd2b6",
@@ -819,6 +2162,8 @@
    "short": "d6da568",
    "repo": "O-R-G-dapp-public-preview",
    "repoLabel": "dApp preview",
+   "private": false,
+   "masked": false,
    "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/d6da568cd2b6436a7f909559b05ad7aa558872be",
    "d": "2026-10-05",
    "time": "5:31 PM",
@@ -830,12 +2175,86 @@
     "name": "Behind the scenes",
     "icon": "gear-six"
    },
+   "priority": null,
    "who": {
-    "name": "Christopher",
+    "name": "Christopher W.",
     "github": "drasticstatic",
+    "avatar": "github",
     "known": true
    },
-   "with": []
+   "agents": [
+    {
+     "name": "Claude",
+     "tool": "Claude Code",
+     "label": "Claude Code"
+    }
+   ]
+  },
+  {
+   "id": "7f97bfda25e6",
+   "short": "7f97bfd",
+   "repo": "O-R-G",
+   "repoLabel": "O-R-G (private)",
+   "private": true,
+   "masked": true,
+   "url": null,
+   "d": "2026-10-05",
+   "time": "5:28 PM",
+   "ts": "2026-10-05T21:28:21Z",
+   "text": "████████ ██████ ████████ ████ ████████ ████ ██████",
+   "area": "",
+   "kind": {
+    "id": "update",
+    "name": "Updates",
+    "icon": "arrows-clockwise"
+   },
+   "priority": null,
+   "who": {
+    "name": "Christopher W.",
+    "github": "drasticstatic",
+    "avatar": "github",
+    "known": true
+   },
+   "agents": [
+    {
+     "name": "Claude",
+     "tool": "Claude Code",
+     "label": "Claude Code"
+    }
+   ]
+  },
+  {
+   "id": "3094aab366fe",
+   "short": "3094aab",
+   "repo": "O-R-G",
+   "repoLabel": "O-R-G (private)",
+   "private": true,
+   "masked": true,
+   "url": null,
+   "d": "2026-10-05",
+   "time": "5:26 PM",
+   "ts": "2026-10-05T21:26:22Z",
+   "text": "████ ████ ████████ ████████ ████ ████ ████ ██████ ██ ██████",
+   "area": "",
+   "kind": {
+    "id": "records",
+    "name": "Records and docs",
+    "icon": "notebook"
+   },
+   "priority": null,
+   "who": {
+    "name": "Christopher W.",
+    "github": "drasticstatic",
+    "avatar": "github",
+    "known": true
+   },
+   "agents": [
+    {
+     "name": "Claude",
+     "tool": "Claude Code",
+     "label": "Claude Code"
+    }
+   ]
   },
   {
    "id": "cda97da939b9",
@@ -843,6 +2262,8 @@
    "short": "cda97da",
    "repo": "O-R-G-astro-public",
    "repoLabel": "The lab",
+   "private": false,
+   "masked": false,
    "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/cda97da939b9a04d0f52a14a07e29c00cb1fd28e",
    "d": "2026-09-23",
    "time": "8:25 PM",
@@ -854,13 +2275,118 @@
     "name": "Records and docs",
     "icon": "notebook"
    },
+   "priority": null,
    "who": {
-    "name": "Christopher",
+    "name": "Christopher W.",
     "github": "drasticstatic",
+    "avatar": "github",
     "known": true
    },
-   "with": [
-    "Alfred"
+   "agents": [
+    {
+     "name": "Alfred",
+     "tool": "Claude Code",
+     "label": "Alfred · Claude Code"
+    }
+   ]
+  },
+  {
+   "id": "24a67d646797",
+   "short": "24a67d6",
+   "repo": "O-R-G",
+   "repoLabel": "O-R-G (private)",
+   "private": true,
+   "masked": true,
+   "url": null,
+   "d": "2026-09-22",
+   "time": "8:28 AM",
+   "ts": "2026-09-22T12:28:10Z",
+   "text": "██████ ██████ ████████ ██████ ████ ████████",
+   "area": "",
+   "kind": {
+    "id": "under",
+    "name": "Behind the scenes",
+    "icon": "gear-six"
+   },
+   "priority": null,
+   "who": {
+    "name": "Christopher W.",
+    "github": "drasticstatic",
+    "avatar": "github",
+    "known": true
+   },
+   "agents": [
+    {
+     "name": "Mystarch",
+     "tool": "Claude Code",
+     "label": "Mystarch · Claude Code"
+    }
+   ]
+  },
+  {
+   "id": "7c9bac39e66a",
+   "short": "7c9bac3",
+   "repo": "O-R-G-dapp",
+   "repoLabel": "The dApp's source",
+   "private": true,
+   "masked": true,
+   "url": null,
+   "d": "2026-09-15",
+   "time": "9:56 AM",
+   "ts": "2026-09-15T13:56:07Z",
+   "text": "████ ██ ████████ ████ ██ ████████ ████████ ████ ██ ████████",
+   "area": "",
+   "kind": {
+    "id": "fix",
+    "name": "Fixes",
+    "icon": "wrench"
+   },
+   "priority": null,
+   "who": {
+    "name": "Christopher W.",
+    "github": "drasticstatic",
+    "avatar": "github",
+    "known": true
+   },
+   "agents": [
+    {
+     "name": "Claude",
+     "tool": "Claude Code",
+     "label": "Claude Code"
+    }
+   ]
+  },
+  {
+   "id": "3f8546379709",
+   "short": "3f85463",
+   "repo": "O-R-G",
+   "repoLabel": "O-R-G (private)",
+   "private": true,
+   "masked": true,
+   "url": null,
+   "d": "2026-09-15",
+   "time": "9:53 AM",
+   "ts": "2026-09-15T13:53:57Z",
+   "text": "██████ ██████ ██████ ████████ ██████ ████████ ██ ████████ ██ ████████",
+   "area": "",
+   "kind": {
+    "id": "records",
+    "name": "Records and docs",
+    "icon": "notebook"
+   },
+   "priority": null,
+   "who": {
+    "name": "Christopher W.",
+    "github": "drasticstatic",
+    "avatar": "github",
+    "known": true
+   },
+   "agents": [
+    {
+     "name": "Claude",
+     "tool": "Claude Code",
+     "label": "Claude Code"
+    }
    ]
   },
   {
@@ -869,6 +2395,8 @@
    "short": "31edfac",
    "repo": "O-R-G-astro-public",
    "repoLabel": "The lab",
+   "private": false,
+   "masked": false,
    "url": "https://github.com/drasticstatic/O-R-G-astro-public/commit/31edfacbe149b74072825894e361ba03f71b83b6",
    "d": "2026-09-15",
    "time": "9:51 AM",
@@ -876,16 +2404,57 @@
    "text": "Scaffold O-R-G-astro: sidecar site, mirroring gratitude-token-project_astro",
    "area": "",
    "kind": {
-    "id": "new",
-    "name": "New",
-    "icon": "sparkle"
+    "id": "under",
+    "name": "Behind the scenes",
+    "icon": "gear-six"
    },
+   "priority": null,
    "who": {
-    "name": "Christopher",
+    "name": "Christopher W.",
     "github": "drasticstatic",
+    "avatar": "github",
     "known": true
    },
-   "with": []
+   "agents": [
+    {
+     "name": "Claude",
+     "tool": "Claude Code",
+     "label": "Claude Code"
+    }
+   ]
+  },
+  {
+   "id": "06051007d2bf",
+   "short": "0605100",
+   "repo": "O-R-G-dapp",
+   "repoLabel": "The dApp's source",
+   "private": true,
+   "masked": true,
+   "url": null,
+   "d": "2026-09-15",
+   "time": "9:47 AM",
+   "ts": "2026-09-15T13:47:42Z",
+   "text": "████ ██████ ██████ ██████ ████████ ████ ████ ██████ ████████",
+   "area": "",
+   "kind": {
+    "id": "under",
+    "name": "Behind the scenes",
+    "icon": "gear-six"
+   },
+   "priority": null,
+   "who": {
+    "name": "Christopher W.",
+    "github": "drasticstatic",
+    "avatar": "github",
+    "known": true
+   },
+   "agents": [
+    {
+     "name": "Claude",
+     "tool": "Claude Code",
+     "label": "Claude Code"
+    }
+   ]
   },
   {
    "id": "3d600976c811",
@@ -893,6 +2462,8 @@
    "short": "3d60097",
    "repo": "O-R-G-dapp-public-preview",
    "repoLabel": "dApp preview",
+   "private": false,
+   "masked": false,
    "url": "https://github.com/drasticstatic/O-R-G-dapp-public-preview/commit/3d600976c811d22a467003f9e38feb5c6afa1193",
    "d": "2026-09-15",
    "time": "9:45 AM",
@@ -904,12 +2475,86 @@
     "name": "New",
     "icon": "sparkle"
    },
+   "priority": null,
    "who": {
-    "name": "Christopher",
+    "name": "Christopher W.",
     "github": "drasticstatic",
+    "avatar": "github",
     "known": true
    },
-   "with": []
+   "agents": [
+    {
+     "name": "Claude",
+     "tool": "Claude Code",
+     "label": "Claude Code"
+    }
+   ]
+  },
+  {
+   "id": "3a344cd2ea5e",
+   "short": "3a344cd",
+   "repo": "O-R-G",
+   "repoLabel": "O-R-G (private)",
+   "private": true,
+   "masked": true,
+   "url": null,
+   "d": "2026-09-15",
+   "time": "8:28 AM",
+   "ts": "2026-09-15T12:28:33Z",
+   "text": "████ ████████ ██ ████████",
+   "area": "",
+   "kind": {
+    "id": "new",
+    "name": "New",
+    "icon": "sparkle"
+   },
+   "priority": null,
+   "who": {
+    "name": "Christopher W.",
+    "github": "drasticstatic",
+    "avatar": "github",
+    "known": true
+   },
+   "agents": [
+    {
+     "name": "Mystarch",
+     "tool": "Claude Code",
+     "label": "Mystarch · Claude Code"
+    }
+   ]
+  },
+  {
+   "id": "e3a19f5178dd",
+   "short": "e3a19f5",
+   "repo": "O-R-G",
+   "repoLabel": "O-R-G (private)",
+   "private": true,
+   "masked": true,
+   "url": null,
+   "d": "2026-09-14",
+   "time": "6:20 PM",
+   "ts": "2026-09-14T22:20:51Z",
+   "text": "████████ ████████ ██████ ████████ ████████ ████ ██████",
+   "area": "",
+   "kind": {
+    "id": "new",
+    "name": "New",
+    "icon": "sparkle"
+   },
+   "priority": null,
+   "who": {
+    "name": "Christopher W.",
+    "github": "drasticstatic",
+    "avatar": "github",
+    "known": true
+   },
+   "agents": [
+    {
+     "name": "Mystarch",
+     "tool": "Claude Code",
+     "label": "Mystarch · Claude Code"
+    }
+   ]
   }
  ]
 }
