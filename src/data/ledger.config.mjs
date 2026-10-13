@@ -26,7 +26,7 @@ export const LEDGER = {
     "O-R-G-dapp-public-preview": { label: "dApp preview", blurb: "The O-R-G dApp preview" },
   },
   // First name and last initial (every org's default since ledger v2), linked to GitHub.
-  people: [{ name: "Christopher W.", github: "drasticstatic", names: ["Christopher", "drasticstatic", "Christopher Wilson"] }],
+  people: [{ name: "Christopher W", github: "drasticstatic", names: ["Christopher", "drasticstatic", "Christopher Wilson"] }],
   nameStyle: "first-last-initial",
   // The lab's changelog is written in src/data/changelog.ts (its wording may match a commit).
   verify: { publicText: ["src/data/changelog.ts"] },
