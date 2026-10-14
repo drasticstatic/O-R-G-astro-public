@@ -6,6 +6,8 @@ import { url, DAPP, LIVE, DIRECTIONS, ORG_KIT, ORG_LOG, ORG_SITE, LAB } from "..
 interface Props {
   title: string;
   description?: string;
+  /** The nav item this page belongs to (an id from the lab's nav below); otherwise matched from the URL. */
+  active?: "lab" | "changelog" | "ledger" | "map" | "roadmap" | "sustainability";
   splash?: boolean;
   /** Absolute URL of a 1200×630 JPEG for link previews; defaults to the lab's social card. */
   ogImage?: string;
@@ -15,19 +17,74 @@ interface Props {
 const {
   title,
   description = "The drasticstatic ORG lab: what Christopher builds for ORG, and how it's going.",
+  active,
   splash = true,
   ogImage = LAB + "social-card.jpg",
   ogAlt = "The drasticstatic ORG lab: a lab for ORG's next ideas, with ORG's rainbow octagon art.",
   ogType = "website",
 } = Astro.props;
 const pageUrl = new URL(Astro.url.pathname, "https://drasticstatic.github.io").toString();
-const here = Astro.url.pathname.replace(/\/$/, "");
-const nav = [
-  { href: url(""), label: "Lab" },
-  { href: url("changelog"), label: "Changelog" },
-  { href: url("ledger"), label: "Ledger" },
-  { href: url("map"), label: "Map" },
-];
+
+// The lab's own navbar and footer groups (kit 1.2). ORG's org.js holds ORG's; this lab loads the same
+// kit by absolute URL, so it swaps in its own nav and footer between org.js and arrival.js (the
+// inline script in <head>). Contact, Community and Donate are ORG's, since the lab is about ORG.
+const ORG_DONATE = ORG_SITE + "donate/";
+const labNav = {
+  label: "drasticstatic ORG lab",
+  fold: 1100,
+  items: [
+    { id: "lab", label: "Lab", icon: "flask", href: LAB, exact: true, priority: 1, note: "The lab's front door" },
+    { id: "changelog", label: "Changelog", icon: "clock-counter-clockwise", href: LAB + "changelog", priority: 3, note: "What the lab built, newest first" },
+    { id: "ledger", label: "Ledger", icon: "scroll", href: LAB + "ledger", priority: 2, note: "Every public change, in plain words" },
+    { id: "map", label: "Map", icon: "map-trifold", href: LAB + "map", priority: 2, note: "Every place, with a picture of each" },
+    { id: "dapp", label: "dApp preview", icon: "cube", href: DAPP, priority: 3, keep: true, note: "A web3-ready preview of ORG's site" },
+    {
+      id: "org",
+      label: "ORG",
+      icon: "polygon",
+      priority: 2,
+      items: [
+        { id: "astrolog", label: "ORG AstroLog", icon: "door-open", href: ORG_LOG, note: "ORG's official record" },
+        { id: "portal", label: "ORG's entry portal", icon: "house-simple", href: ORG_SITE, note: "ORG's front door on GitHub" },
+        { id: "home", label: "orgspirituality.org", icon: "globe-hemisphere-west", href: LIVE, note: "The official site, where members decide" },
+        { id: "directions", label: "Three directions", icon: "compass-tool", href: DIRECTIONS, note: "Renan T's proposal, kept as history" },
+      ],
+    },
+    {
+      id: "involved",
+      label: "Get involved",
+      icon: "hand-heart",
+      priority: 2,
+      items: [
+        { id: "community", label: "Community", icon: "users-three", href: LIVE + "/community", open: "community", note: "Where ORG's members talk, on Telegram" },
+        { id: "contact", label: "Reach out", icon: "envelope-simple", href: LIVE + "/about#contact", open: "contact", note: "Every way to reach ORG" },
+        { id: "donate", label: "Donate", icon: "heart", href: ORG_DONATE, note: "ORG's ways to give" },
+      ],
+    },
+    {
+      id: "about",
+      label: "About",
+      icon: "info",
+      priority: 1,
+      items: [
+        { id: "roadmap", label: "Roadmap", icon: "path", href: LAB + "roadmap", note: "Where the lab is headed" },
+        { id: "sustainability", label: "Sustainability", icon: "plant", href: LAB + "sustainability", note: "What keeps it running" },
+        { id: "source", label: "The lab's source", icon: "code", href: "https://github.com/drasticstatic/O-R-G-astro-public", note: "The public mirror on GitHub" },
+        { id: "drasticstatic", label: "drasticstatic", icon: "github-logo", href: "https://github.com/drasticstatic", note: "Christopher on GitHub" },
+      ],
+    },
+  ],
+};
+const labFooter = {
+  label: "The drasticstatic ORG lab, all the ways around",
+  groups: [
+    { label: "The lab", icon: "flask", items: ["lab", "changelog", "ledger", "map", "dapp"] },
+    { label: "ORG", icon: "polygon", items: ["astrolog", "portal", "home", "directions"] },
+    { label: "Get involved", icon: "hand-heart", items: ["community", "contact", "donate", { id: "guide", label: "Welcome guide", icon: "signpost", href: "#welcome", open: "guide" }] },
+    { label: "About this lab", icon: "wrench", items: ["roadmap", "sustainability", "source", "drasticstatic"] },
+  ],
+  note: "A personal lab, not ORG's official site. ORG's name and octagon mark belong to ORG.",
+};
 
 // This lab lives on drasticstatic.github.io, so it loads ORG's arrival kit from ORG's own site by
 // absolute URL: the same files the ORG portal and AstroLog use. The site description below is the
@@ -69,6 +126,9 @@ const labSite = {
     { t: "dApp preview", k: "lab", i: "cube", h: DAPP, pin: true, x: "web3 wallet octagon three lights" },
     { t: "The lab's ledger", k: "lab", i: "scroll", h: LAB + "ledger/", pin: true, x: "commits github history code record plain words" },
     { t: "ORG's ledger", k: "ORG AstroLog", i: "scroll", h: ORG_LOG + "ledger", x: "commits github history org code" },
+    { t: "The lab's map", k: "lab", i: "map-trifold", h: LAB + "map", x: "sitemap pictures thumbnails diagram" },
+    { t: "The lab's roadmap", k: "lab", i: "path", h: LAB + "roadmap", x: "plans next future" },
+    { t: "The lab's sustainability", k: "lab", i: "plant", h: LAB + "sustainability", x: "tokens rebuild upkeep reown allowlist" },
   ],
 };
 ---
@@ -110,41 +170,42 @@ const labSite = {
     <link rel="stylesheet" href={`${ORG_KIT}/org.css`} />
     <script is:inline define:vars={{ labSite }}>window.ARRIVAL_SITE = labSite;</script>
     <script is:inline src={`${ORG_KIT}/org.js`}></script>
+    <!-- The lab's own navbar and footer groups, in place of ORG's, before the kit reads them. -->
+    <script is:inline define:vars={{ labNav, labFooter }}>if (window.ARRIVAL) { window.ARRIVAL.nav = labNav; window.ARRIVAL.footer = labFooter; }</script>
     <script is:inline src={`${ORG_KIT}/arrival.js`}></script>
   </head>
   <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <!-- One row at every width: the brand, the kit's navbar (it folds into "More", then a Menu button
+         below 1100px, rather than wrapping) and the kit's tools. -->
     <header class="site-header">
-      <div class="wrap">
-        <a class="brand" href={url("")}>
-          <OctagonMark size={30} />
-          <span class="display">ORG</span>
-          <small>drasticstatic lab</small>
-        </a>
-        <nav class="site-nav" aria-label="Main">
-          {nav.map((n) => (
-            <a href={n.href} aria-current={n.href.replace(/\/$/, "") === here ? "page" : undefined}>{n.label}</a>
-          ))}
-          <a href={DAPP}>dApp preview</a>
-          <a href={ORG_LOG} class="official">ORG AstroLog</a>
-        </nav>
-        <arrival-controls></arrival-controls>
-      </div>
+      <a class="brand" href={url("")} aria-label="The drasticstatic ORG lab, home">
+        <OctagonMark size={28} />
+        <span class="arr-brand-text"><span class="display">ORG</span><small> lab</small></span>
+      </a>
+      <arrival-nav current={active}></arrival-nav>
+      <arrival-controls></arrival-controls>
     </header>
 
     <main id="main">
       <slot />
     </main>
 
+    <!-- Every way around, in groups (drawn by the kit from the lab's footer groups above). -->
+    <div class="page-foot"><arrival-footer current={active}></arrival-footer></div>
+
     <footer class="site-footer">
       <div class="wrap">
-        <p>
-          The drasticstatic ORG lab: Christopher's previews and experiments for ORG. It isn't ORG's official site; that's <a href={LIVE}>orgspirituality.org</a>, where members vote on every change. ORG's official changelog is the <a href={ORG_LOG}>ORG AstroLog</a>.
-        </p>
-        <p>
-          ORG's sites: the <a href={ORG_SITE}>entry portal</a>, the <a href={ORG_LOG}>AstroLog</a>, its <a href={`${ORG_LOG}ledger`}>ledger</a> and <a href={`${ORG_LOG}map`}>map</a>, and <a href={LIVE}>orgspirituality.org</a>. This lab: the <a href={url("changelog/")}>changelog</a>, the <a href={url("ledger/")}>ledger</a>, and the <a href={DAPP}>dApp preview</a>.
-        </p>
-        <p>
-          The three lights began as <a href={DIRECTIONS}>Renan Teixeira's design proposal</a>, now kept as history in ORG's AstroLog. Built by <a href="https://github.com/drasticstatic">drasticstatic</a> with <a href="https://github.com/drasticstatic/anthropas-argus-alfred-public-preview">Alfred</a>. New here? Open the <a href="#welcome" data-arrival-open="guide">welcome guide</a>.
+        <p>The drasticstatic ORG lab: Christopher's previews and experiments for ORG. It isn't ORG's official site; that's orgspirituality.org, where members vote on every change, and ORG's official changelog is the ORG AstroLog. The three lights began as Renan T's design proposal, now kept as history in ORG's AstroLog.</p>
+        <p class="foot-links">
+          <a href={LIVE}><i class="ph ph-globe-hemisphere-west" aria-hidden="true"></i>orgspirituality.org</a>
+          <a href={ORG_LOG}><i class="ph ph-door-open" aria-hidden="true"></i>ORG AstroLog</a>
+          <a href={DIRECTIONS}><i class="ph ph-compass-tool" aria-hidden="true"></i>Three directions</a>
+          <a href={LIVE + "/community"} data-arrival-open="community"><i class="ph ph-users-three" aria-hidden="true"></i>Community</a>
+          <a href={LIVE + "/about#contact"} data-arrival-open="contact"><i class="ph ph-envelope-simple" aria-hidden="true"></i>Reach out</a>
+          <a href="#welcome" data-arrival-open="guide"><i class="ph ph-signpost" aria-hidden="true"></i>Welcome guide</a>
+          <a href="https://github.com/drasticstatic"><i class="ph ph-github-logo" aria-hidden="true"></i>Built by drasticstatic</a>
+          <a href="https://github.com/drasticstatic/anthropas-argus-alfred-public-preview"><i class="ph ph-robot" aria-hidden="true"></i>with Alfred</a>
         </p>
       </div>
     </footer>

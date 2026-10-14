@@ -1,0 +1,10 @@
+---
+// /roadmap: the repository's ROADMAP.md, as a page (kit 1.2).
+import Base from "../layouts/Base.astro";
+import RepoDoc from "../components/RepoDoc.astro";
+import { LAB } from "../lib/url";
+---
+
+<Base title="Roadmap: drasticstatic ORG lab" description="Where the drasticstatic ORG lab and its dApp preview are headed next, in rough order and without dates." active="roadmap" ogImage={`${LAB}og/roadmap.jpg`} ogAlt="The lab's roadmap: what comes next, on ORG's perforated sheet.">
+  <RepoDoc doc="roadmap" />
+</Base>

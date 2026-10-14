@@ -8,7 +8,7 @@ const fmt = (d: string) =>
   new Date(`${d}T12:00:00`).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 const count = (p: (typeof PEOPLE)[number]) => CHANGELOG.filter((e) => madeBy(p, e.who)).length;
 ---
-<Base title="drasticstatic ORG lab: what Christopher builds for ORG">
+<Base active="lab" title="drasticstatic ORG lab: what Christopher builds for ORG">
   <section class="hero">
     <div class="hero-bg" aria-hidden="true">
       <canvas class="marble" id="marble"></canvas>

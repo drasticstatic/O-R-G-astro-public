@@ -12,6 +12,6 @@ const BASE = "/O-R-G-astro-public";
 export default defineConfig({
   site: "https://drasticstatic.github.io",
   base: BASE,
-  trailingSlash: "ignore",
+  trailingSlash: "never",
   markdown: { processor: satteri({ hastPlugins: [baseLinks(BASE)] }) },
 });
