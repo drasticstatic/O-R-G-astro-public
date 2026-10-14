@@ -21,6 +21,14 @@ const BACKEND = "https://github.com/Octagon-Religious-Research-Group-ORG/org-bac
 
 export const CHANGELOG: Entry[] = [
   {
+    date: "2026-10-13",
+    title: "One navbar, a map with pictures, and every way into ORG",
+    detail: "The lab now runs on ORG's kit 1.2. Every page has one navbar that never wraps (Lab, Changelog, Ledger, Map, the dApp preview, an ORG menu, Get involved and About, an icon on each), folding into a Menu button on smaller screens, with the same links in groups at the foot of each page. Reach out and Community open ORG's own windows: its addresses, Tripp, its CONTACTS.md, and its Telegram group. The map now shows every destination as a card with the picture its link shows, the lab and the dApp preview included, above the diagram, all drawn from ORG's one copy. New Roadmap and Sustainability pages say where the lab is headed and what keeps it running. Names read first name and last initial.",
+    area: "Lab",
+    who: "Christopher W",
+    link: "https://drasticstatic.github.io/O-R-G-astro-public/map",
+  },
+  {
     date: "2026-10-12",
     title: "The dApp preview joins the suite",
     detail: "The dApp preview now runs on ORG's arrival kit, like this lab and ORG's own sites: the first-visit welcome, the light & motion controls, reading mode, contrast, cursor effects, the welcome guide, / to search, and a count of what's new here since your last visit. A strip at the top links straight to this changelog. The \"three directions\" showcase moved off its home page and into ORG's AstroLog, where Renan's proposal is kept as history; everything else about the dApp works as before.",
@@ -215,14 +223,14 @@ export const CHANGELOG: Entry[] = [
   },
 ];
 
-// Who made the changes, named and described the way ORG's organization profile does. `match` lists
+// Who made the changes, by first name and last initial, described the way ORG's organization profile does. `match` lists
 // how they appear in an entry's `who`. Avatars come from GitHub when a handle is known; anyone else
 // gets ORG's octagon initials from the arrival kit.
 export type Person = { name: string; role: string; match: string[]; github?: string };
 export const PEOPLE: Person[] = [
-  { name: "Christopher", role: "Builds this lab and the dApp preview, with Alfred. Looks after ORG's GitHub.", match: ["drasticstatic", "Christopher"], github: "drasticstatic" },
-  { name: "Renan Teixeira", role: "Develops ORG's website and drew up the design directions.", match: ["Renan"], github: "SCDEVBrazil" },
-  { name: "Tripp Aardema", role: "ORG's founder. Leads much of the site's content and design.", match: ["Tripp"] },
+  { name: "Christopher W", role: "Builds this lab and the dApp preview, with Alfred. Looks after ORG's GitHub.", match: ["drasticstatic", "Christopher"], github: "drasticstatic" },
+  { name: "Renan T", role: "Develops ORG's website and drew up the design directions.", match: ["Renan"], github: "SCDEVBrazil" },
+  { name: "Tripp A", role: "ORG's founder. Leads much of the site's content and design.", match: ["Tripp"] },
   { name: "mitch8020", role: "Built ORG's original site and its API.", match: ["mitch8020"], github: "mitch8020" },
 ];
 
