@@ -1,31 +1,35 @@
 ---
-// The same map as the ORG AstroLog's, drawn from ORG's canonical copy (see src/data/map.ts).
+// The same map as the ORG AstroLog's, drawn from ORG's canonical copy (see src/data/map.ts): every
+// destination as a card with its share image (kit 1.2), then the diagram of how it connects.
 import Base from "../layouts/Base.astro";
 import OrgMap from "../components/OrgMap.astro";
+import MapGrid from "../components/MapGrid.astro";
 import { loadMap } from "../data/map";
 import { mapCardUrl } from "../og/cards";
-import { ORG_LOG } from "../lib/url";
+import { ORG_LOG, ORG_SITE } from "../lib/url";
 
-const { map, from } = await loadMap();
+const { map, grid, from } = await loadMap();
 ---
 <Base
   title="Map: drasticstatic ORG lab"
-  description="How ORG's code, hosting, the lab's previews and the proposals connect."
+  description="Every place ORG's pages and this lab lead, each with a picture of where it goes, and how ORG's code, hosting, the lab's previews and the proposals connect."
+  active="map"
   ogImage={mapCardUrl}
   ogAlt="A map of ORG's sites: the organization's repositories, where each one runs, and the previews and proposals around them."
 >
   <header class="wrap"><div class="head">
     <h1>Map</h1>
-    <p class="muted">
-      How ORG's repositories, hosting, the lab's previews and the proposals connect. Solid lines carry code or
-      traffic; dashed lines show where one project borrows from another. Dashed boxes are private.
-    </p>
-    <p class="muted source">
-      This is the same map as the <a href={`${ORG_LOG}map`}>ORG AstroLog's</a>: ORG keeps its one copy, and the
-      lab draws it each time it's built{from === "snapshot" ? " (this build used the lab's saved copy)" : ""}.
-    </p>
+    <p class="muted">Every place ORG's pages lead, this lab included, each with the picture it shows when you share its link, so you can see where you're going before you go.</p>
+    <p class="muted source">This is the same map as the <a href={`${ORG_LOG}map`}>ORG AstroLog's</a> and the <a href={`${ORG_SITE}map/`}>entry portal's</a>: ORG keeps its one copy, and the lab draws it each time it's built{from === "snapshot" ? " (this build used the lab's saved copy)" : ""}.</p>
   </div></header>
+  {grid && (
+    <div class="wrap grid-wrap">
+      <MapGrid map={grid} here="lab" />
+    </div>
+  )}
   <div class="wrap">
+    <h2 class="diagram-h">How it connects</h2>
+    <p class="muted diagram-p">How ORG's repositories, hosting, the lab's previews and the proposals connect. Solid lines carry code or traffic; dashed lines show where one project borrows from another. Dashed boxes are private.</p>
     <div class="scroller">
       <OrgMap map={map} here="lab" />
     </div>
@@ -37,5 +41,8 @@ const { map, from } = await loadMap();
   .head h1 { font-size: clamp(2.6rem, 6vw, 4rem); }
   .head p { margin-top: 1rem; font-size: 1.1rem; }
   .head .source { font-size: 0.95rem; }
-  .scroller { overflow-x: auto; padding: 1rem; margin-bottom: 4rem; background: var(--surface); border: 1px solid var(--border); }
+  .grid-wrap { margin-bottom: 2rem; }
+  .diagram-h { font-size: clamp(1.6rem, 4vw, 2rem); margin: 1rem 0 0.6rem; }
+  .diagram-p { margin: 0 0 1.25rem; max-width: 48rem; }
+  .scroller { overflow-x: auto; padding: 1rem; margin-bottom: 1rem; background: var(--surface); border: 1px solid var(--border); }
 </style>

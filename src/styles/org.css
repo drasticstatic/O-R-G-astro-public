@@ -82,40 +82,55 @@ a { color: var(--accent); text-underline-offset: 0.18em; text-decoration-thickne
     var(--background);
 }
 
-/* Header */
+/* Header: one row at every width (kit 1.2). The brand may shrink, <arrival-nav> takes the room
+   that's left and folds what doesn't fit into "More", then into the Menu; the tools never shrink. */
+.skip {
+  position: absolute; left: 0.75rem; top: -3rem; z-index: 100;
+  padding: 0.5rem 0.8rem; background: var(--accent); color: var(--on-accent); font-weight: 700;
+}
+.skip:focus { top: 0.6rem; }
 .site-header {
   position: sticky; top: 0; z-index: 40;
-  border-bottom: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
+  display: flex; flex-wrap: nowrap; align-items: center; gap: 0.75rem;
+  padding: 0.6rem 1.25rem 0.7rem;
   background: color-mix(in srgb, var(--background) 85%, transparent);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
 }
-.site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.7rem; }
-.brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--heading); }
-.brand .display { font-size: 1.25rem; }
+/* ORG's blotter perforation instead of a hairline. */
+.site-header::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 3px;
+  background: linear-gradient(to right, var(--perf) 0 12px, transparent 0) 0 0 / 21px 3px repeat-x;
+}
+.brand { display: inline-flex; flex: 0 1 auto; align-items: center; gap: 0.55rem; min-width: 0; text-decoration: none; color: var(--heading); white-space: nowrap; }
+.brand svg { flex: none; }
+.brand .arr-brand-text { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.brand .display { font-size: 1.2rem; }
 .brand small { font-family: var(--font-body); color: var(--muted); font-size: 0.85rem; }
-.site-nav { display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap; }
-.site-nav a { color: color-mix(in srgb, var(--foreground) 82%, transparent); text-decoration: none; font-size: 0.93rem; }
-.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--accent); }
-.site-nav a[aria-current="page"] { text-decoration: underline; }
-
-.site-nav a.official { color: var(--accent); }
-.site-header arrival-controls { margin-left: auto; }
-@media (max-width: 860px) {
-  .site-header .wrap { flex-wrap: wrap; row-gap: 0.4rem; }
-  /* One swipeable row of pages under the brand and tools. */
-  .site-nav { order: 3; width: 100%; gap: 1.1rem; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; white-space: nowrap; }
-  .site-nav::-webkit-scrollbar { display: none; }
+.site-header arrival-controls { flex: none; }
+@media (max-width: 400px) {
+  .site-header { padding-inline: 1rem; gap: 0.5rem; }
 }
-@media (max-width: 440px) {
-  .brand small { display: none; }
+
+/* The footer's link groups (kit 1.2), on one perforated sheet. */
+.page-foot { width: 100%; max-width: 72rem; margin: auto auto 0; padding: 3rem 1.25rem 1.5rem; }
+.page-foot arrival-footer {
+  --dash: 12px; --gap: 9px; --w: 3px; --step: calc(var(--dash) + var(--gap));
+  display: block; padding: 1.4rem 1.4rem 1.1rem;
+  background:
+    linear-gradient(to right, var(--perf) 0 var(--dash), transparent 0) top left / var(--step) var(--w) repeat-x,
+    linear-gradient(to right, var(--perf) 0 var(--dash), transparent 0) bottom left / var(--step) var(--w) repeat-x,
+    linear-gradient(to bottom, var(--perf) 0 var(--dash), transparent 0) top left / var(--w) var(--step) repeat-y,
+    linear-gradient(to bottom, var(--perf) 0 var(--dash), transparent 0) top right / var(--w) var(--step) repeat-y,
+    color-mix(in srgb, var(--surface) 88%, transparent);
 }
 
 /* Footer */
-.site-footer { margin-top: auto; border-top: 1px solid var(--border); background: var(--surface); }
+.site-footer { margin-top: 2rem; border-top: 1px solid var(--border); background: var(--surface); }
 .site-footer .wrap { padding-block: 2.5rem; display: grid; gap: 1rem; font-size: 0.9rem; color: var(--muted); }
-@media (max-width: 1320px) {
-  .site-header [data-arr-drawer] .arr-chip-label { display: none; }
-}
+.foot-links { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; }
+.foot-links a { display: inline-flex; align-items: center; gap: 0.35rem; color: var(--muted); text-decoration: none; }
+.foot-links a:hover { color: var(--accent); }
+.foot-links .ph { color: var(--accent); }
 
 /* "ORG's official record lives elsewhere" pointer, used on the porch and the changelog. */
 .pointer {

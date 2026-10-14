@@ -1,0 +1,36 @@
+---
+// A page rendered from one of the repository's own root documents (ROADMAP.md, SUSTAINABILITY.md),
+// so the same words read on GitHub and here (kit 1.2; canonical copy: my-template
+// changelog-template/arrival/astro/RepoDoc.astro, set here in the lab's card).
+import { getCollection, render } from "astro:content";
+
+interface Props {
+  doc: "roadmap" | "sustainability";
+}
+const { doc } = Astro.props;
+const entry = (await getCollection("docs")).find((d) => d.id.toLowerCase().includes(doc));
+if (!entry) throw new Error(`[docs] ${doc.toUpperCase()}.md not found at the repository root`);
+const { Content } = await render(entry);
+---
+
+<article class="wrap repo-doc">
+  <div class="oct-card"><div class="oct-inner prose">
+    <Content />
+  </div></div>
+</article>
+
+<style>
+  .repo-doc { max-width: 50rem; padding-block: 3rem 1rem; }
+  .prose :global(h1) { font-size: clamp(2rem, 5vw, 2.6rem); line-height: 1.1; margin: 0 0 1rem; }
+  .prose :global(h2) { font-size: 1.45rem; margin: 2rem 0 0.75rem; }
+  .prose :global(h3) { font-size: 1.15rem; margin: 2rem 0 0.6rem; }
+  .prose :global(p), .prose :global(ul), .prose :global(ol) { margin: 0 0 1rem; }
+  .prose :global(ul), .prose :global(ol) { padding-left: 1.3em; }
+  .prose :global(li + li) { margin-top: 0.3rem; }
+  .prose :global(code) { font-size: 0.9em; padding: 0.08em 0.3em; background: var(--surface-muted); }
+  .prose :global(blockquote) { margin: 0 0 1rem; padding: 0.25rem 0 0.25rem 1rem; border-left: 3px solid var(--accent); color: var(--muted); }
+  .prose :global(table) { display: block; width: 100%; overflow-x: auto; border-collapse: collapse; font-size: 0.92rem; margin: 0 0 1.25rem; }
+  .prose :global(th), .prose :global(td) { text-align: left; vertical-align: top; padding: 0.55rem 0.65rem; border-bottom: 1px solid var(--border); }
+  .prose :global(.tldr) { display: block; position: relative; padding: 0.9rem 1rem 0.9rem 2.6rem; margin: 0 0 1.25rem; background: color-mix(in srgb, var(--accent) 12%, var(--surface)); border-left: 3px solid var(--accent); }
+  .prose :global(.tldr .ph) { position: absolute; left: 0.95rem; top: 1.15rem; color: var(--accent); }
+</style>

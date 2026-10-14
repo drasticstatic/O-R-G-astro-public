@@ -1,0 +1,10 @@
+---
+// /sustainability: the repository's SUSTAINABILITY.md, as a page (kit 1.2).
+import Base from "../layouts/Base.astro";
+import RepoDoc from "../components/RepoDoc.astro";
+import { LAB } from "../lib/url";
+---
+
+<Base title="Sustainability: drasticstatic ORG lab" description="What keeps the drasticstatic ORG lab and the dApp preview running: the tokens, the daily rebuild, ORG's kit, the map, cached previews and the wallet allowlist, and what to do for each." active="sustainability" ogImage={`${LAB}og/sustainability.jpg`} ogAlt="The lab's sustainability notes: what keeps it running, on ORG's perforated sheet.">
+  <RepoDoc doc="sustainability" />
+</Base>
