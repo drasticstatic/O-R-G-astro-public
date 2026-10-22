@@ -141,7 +141,7 @@ export const CHANGELOG: Entry[] = [
     title: "An API for offerings and editable pages",
     detail: "A NestJS backend for the offerings shop, member profiles, and website content that admins can edit and publish.",
     area: "API",
-    who: "mitch8020",
+    who: "JP M",
     link: BACKEND,
   },
   {
@@ -149,7 +149,7 @@ export const CHANGELOG: Entry[] = [
     title: "Offerings shop and website editor",
     detail: "Members can request offerings, and admins can edit page content with drafts and revisions.",
     area: "Live site",
-    who: "mitch8020",
+    who: "JP M",
     link: FRONTEND,
   },
   {
@@ -195,7 +195,7 @@ export const CHANGELOG: Entry[] = [
     title: "Section pages move onto the site",
     detail: "Content that lived in iCloud Pages documents is now part of the site itself.",
     area: "Live site",
-    who: "mitch8020",
+    who: "JP M",
     link: FRONTEND,
   },
   {
@@ -203,14 +203,14 @@ export const CHANGELOG: Entry[] = [
     title: "About page with the founding charter",
     detail: "The ORG charter gets its own page.",
     area: "Content",
-    who: "mitch8020",
+    who: "JP M",
   },
   {
     date: "2026-05-25",
     title: "Sacred-geometry octagon home page",
     detail: "The home page grid of octagons, with the rainbow octagon spinning at the center.",
     area: "Live site",
-    who: "mitch8020",
+    who: "JP M",
     link: FRONTEND,
   },
   {
@@ -218,7 +218,7 @@ export const CHANGELOG: Entry[] = [
     title: "The new site begins",
     detail: "The repository is created and five home page concepts are explored, from Editorial Bureau to Tarot Atelier.",
     area: "Live site",
-    who: "mitch8020",
+    who: "JP M",
     link: FRONTEND,
   },
 ];
@@ -231,7 +231,8 @@ export const PEOPLE: Person[] = [
   { name: "Christopher W", role: "Builds this lab and the dApp preview, with Alfred. Looks after ORG's GitHub.", match: ["drasticstatic", "Christopher"], github: "drasticstatic" },
   { name: "Renan T", role: "Develops ORG's website and drew up the design directions.", match: ["Renan"], github: "SCDEVBrazil" },
   { name: "Tripp A", role: "ORG's founder. Leads much of the site's content and design.", match: ["Tripp"] },
-  { name: "mitch8020", role: "Built ORG's original site and its API.", match: ["mitch8020"], github: "mitch8020" },
+  // Shown as "JP M" (Christopher's decision, 2026-10-22); his GitHub handle still matches.
+  { name: "JP M", role: "Built ORG's original site and its API.", match: ["JP M", "mitch8020"], github: "mitch8020" },
 ];
 
 // Everyone named in a `who`, in the order they're named ("Renan, at Tripp's request" → Renan, Tripp).
