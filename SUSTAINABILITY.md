@@ -1,6 +1,6 @@
 # 🌱 Sustainability: what keeps the lab running
 
-<div class="tldr"><i class="ph ph-plant"></i> <strong>TL;DR:</strong> Nothing here costs money. The lab and the dApp preview rely on two publishing tokens, one daily rebuild, ORG's kit (loaded from ORG's site), ORG's map, cached link previews and, for the dApp, a Reown project allowlist. Each is below, with what to do.</div>
+<div class="tldr"><i class="ph ph-plant"></i> <strong>TL;DR:</strong> Nothing here costs money. The lab and the dApp preview rely on two publishing tokens, one daily rebuild, ORG's kit (loaded from ORG's site), ORG's map, cached link previews and a shared Reown project for wallet connect. Each is below, with what to do. And today one person holds all of their keys, so there's a plan to change that.</div>
 
 The full picture for ORG's own sites is on the
 [ORG AstroLog's sustainability page](https://octagon-religious-research-group-org.github.io/changelog-astro-public/sustainability).
@@ -46,9 +46,11 @@ The map isn't kept here: the lab fetches ORG's `map.json` when it builds (the ca
 
 ### 🧰 ORG's arrival kit, loaded by URL
 
-The lab and the dApp load ORG's kit (`arrival.js`, `arrival.css`, `org.js`, `org.css`) from
+The lab and the dApp load ORG's kit (1.4.0: `arrival.js`, `arrival.css`, `org.js`, `org.css`) from
 `https://octagon-religious-research-group-org.github.io/arrival/`. The lab sets its own navbar and
-footer groups in `src/layouts/Base.astro`; Reach out, Community and Donate are ORG's.
+footer groups in `src/layouts/Base.astro`; Reach out, Community (ORG's four Telegram chats) and the
+kit's essentials (Donate and the welcome guide) are ORG's. The ledger's generator
+(`src/ledger/ledger.mjs`) is a vendored copy of the kit's, like ORG's.
 
 *What to do:* nothing, unless ORG's kit adds a key the lab wants. Kit upgrades land on ORG's portal
 first.
@@ -64,13 +66,46 @@ carry counts.
 ### 👛 The dApp's wallet connection
 
 The dApp preview's wallet connect runs on a **Reown project** (the `NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID`
-secret on `O-R-G-dapp`), which only loads on allowlisted domains: today `https://drasticstatic.github.io`.
-Its donation address is a placeholder until ORG designates a real one.
+secret on `O-R-G-dapp`), which only loads on allowlisted origins. Its donation address is a
+placeholder until ORG designates a real one.
 
-*What to do:* when ORG's own pages or a new domain host wallet giving, add that origin (for ORG's
-GitHub home, `https://octagon-religious-research-group-org.github.io`) to the Reown project's
-allowlist. Never present the gift flow as live while the address is a placeholder.
+*What to do:* never present the gift flow as live while the address is a placeholder.
+
+### 🔌 Wallet connect (Reown project)
+
+That project is **shared by every org today: `00b6a1cd528ff580f1fd845ed08b0187`**, made for this
+dApp and held in Christopher W's Reown account. Giving with crypto and the kit 1.4 pledge of support
+on ORG's portal (and the other orgs' portals) connect through it too; its allowlist lists all five
+org origins plus `https://drasticstatic.github.io`. If it's deleted, suspended or runs past its
+free-plan limit, wallet connect stops on every site at once (each page then says so calmly; nothing
+breaks).
+
+*What to do:* ORG gets its own project with a **one-line `org.js` change** on ORG's portal
+(`give.reownProjectId`, which the pledge uses too); this dApp follows by updating its
+`NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID` secret. Create the project at dashboard.reown.com under an
+account ORG controls, allowlist every origin that uses it, and do it before ORG publishes a treasury
+address.
+
+## 🤝 Stewardship and succession
+
+**Today, one person holds every key here.** The lab and the dApp preview live in drasticstatic's own
+GitHub account (Christopher W), which holds their `PUBLIC_REPO_TOKEN`s and the Reown account above;
+drasticstatic also owns or administers ORG's GitHub organization. That's a single point of failure:
+if he stepped away, the tokens would expire on schedule and both sites would quietly stop updating.
+The plan, so this work outlives any one person:
+
+1. **A home in ORG's organization** for whatever ORG wants to keep (the lab's record, the dApp), with
+   at least two owners from ORG's own people.
+2. **Org-owned automation, not personal tokens**: a GitHub App or an org bot account publishes.
+3. **A token register and a renewal runbook**: every token and secret, its owner, scopes and expiry,
+   and how to renew each, with a reminder a month before.
+4. **Written hand-over steps**: transferring these repositories, the Pages sites and the Reown project.
+5. **Exports and backups** of the repositories, on a schedule.
+
+ORG's side of the plan is on the
+[ORG AstroLog's sustainability page](https://octagon-religious-research-group-org.github.io/changelog-astro-public/sustainability#-stewardship-and-succession); progress is on
+the [roadmap](https://drasticstatic.github.io/O-R-G-astro-public/roadmap).
 
 ## Who looks after it
 
-Christopher W, with Alfred (Claude Code). *Last reviewed 2026-10-13.*
+Christopher W, with Alfred (Claude Code). *Last reviewed 2026-10-22.*

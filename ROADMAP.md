@@ -9,6 +9,9 @@ This is also the repository's `ROADMAP.md`.
 
 ## ✅ Just landed
 
+- **ORG's kit 1.4 in the lab:** Donate and the welcome guide in every footer, More menu and Menu, and
+  the Community window with all four of ORG's Telegram chats (Tripp OK'd): the public chat, events
+  and ceremonies, and the members' two private groups.
 - **ORG's kit 1.2 in the lab:** one navbar on every page that folds into a Menu, footer link groups,
   Reach out and Community windows (ORG's), and this roadmap and a sustainability page.
 - **The map with pictures**, drawn from ORG's copy: every destination as a card, then the diagram.
@@ -23,9 +26,22 @@ This is also the repository's `ROADMAP.md`.
   does, the same wallet connection can fill the "give with crypto" slot on
   [ORG's donate page](https://octagon-religious-research-group-org.github.io/donate/).
 
+## 🤝 Stewardship and succession
+
+So this work outlives any one person (today drasticstatic, Christopher W, holds every key to the lab
+and the dApp preview). Details on the
+[sustainability](https://drasticstatic.github.io/O-R-G-astro-public/sustainability) page.
+
+- [ ] A home in ORG's organization for what ORG wants to keep, with at least two owners from ORG's own people
+- [ ] Publishing through org-owned automation (a GitHub App, or an org bot account), not personal tokens
+- [ ] A token register and a renewal runbook, with a reminder a month before each expiry
+- [ ] Hand-over steps written down: transferring these repositories, the Pages sites and the wallet-connect project
+- [ ] Exports and backups of the repositories, on a schedule
+- [ ] Wallet connect: ORG's own Reown project (a one-line `org.js` change, `give.reownProjectId`; the dApp's secret follows), before any treasury address is published
+
 ## 🌌 Later, and still being explored
 
 - **A network of ORG's own.** A small social network ORG's members own, on open protocols like Lens
   and Farcaster, paired with a DAO where members propose and vote. A direction, not a promise.
 
-*Maintained by Christopher W with Alfred (Claude Code). Last reviewed 2026-10-13.*
+*Maintained by Christopher W with Alfred (Claude Code). Last reviewed 2026-10-22.*
