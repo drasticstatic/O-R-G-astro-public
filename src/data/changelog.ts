@@ -21,6 +21,14 @@ const BACKEND = "https://github.com/Octagon-Religious-Research-Group-ORG/org-bac
 
 export const CHANGELOG: Entry[] = [
   {
+    date: "2026-10-22",
+    title: "Every ORG chat in the Community window, and a pledge of support",
+    detail: "The lab now runs on ORG's kit 1.4. Community opens ORG's four Telegram chats, all OK'd by Tripp: ORG (Public), open to anyone; ORG Events and Ceremonies; and the two private members' groups, ORG (Voting) and ORG EaMs, with a plain note that it's fine to ask (Tripp lets each person in once their membership or EaM form is done) and a link to the membership form. Donate and the welcome guide now sit in every footer, More menu and Menu. ORG's portal has a new pledge page, where anyone can sign a short pledge of support with a wallet: free, nothing sent, nothing recorded, and no counts. ORG's GitHub home is now licensed (code MIT, words CC BY-SA 4.0, ORG's name and marks reserved), mitch8020 is credited as JP M, and the Roadmap and Sustainability pages say who holds the keys today and how they'll be handed on.",
+    area: "Lab",
+    who: "Christopher W",
+    link: "https://octagon-religious-research-group-org.github.io/pledge/",
+  },
+  {
     date: "2026-10-13",
     title: "One navbar, a map with pictures, and every way into ORG",
     detail: "The lab now runs on ORG's kit 1.2. Every page has one navbar that never wraps (Lab, Changelog, Ledger, Map, the dApp preview, an ORG menu, Get involved and About, an icon on each), folding into a Menu button on smaller screens, with the same links in groups at the foot of each page. Reach out and Community open ORG's own windows: its addresses, Tripp, its CONTACTS.md, and its Telegram group. The map now shows every destination as a card with the picture its link shows, the lab and the dApp preview included, above the diagram, all drawn from ORG's one copy. New Roadmap and Sustainability pages say where the lab is headed and what keeps it running. Names read first name and last initial.",
