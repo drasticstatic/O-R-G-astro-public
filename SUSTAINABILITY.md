@@ -28,6 +28,21 @@ its private work, which it shows masked.
 classic token (`repo` + `workflow`), update the secret on both repositories, and run each deploy
 workflow once by hand. An optional read-only `LEDGER_TOKEN` keeps the ledger off the write token.
 
+### 🔍 The ledger's read-only token (`LEDGER_TOKEN`)
+
+**Set since 2026-10-26:** the fine-grained `ledger-read-drasticstatic`.
+- **Resource owner:** `drasticstatic`.
+- **Repositories, and only these six:** `O-R-G`, `O-R-G-astro`, `O-R-G-dapp`,
+  `psychedelic-policy-reform`, `-astro` and `-dapp`. Never all of drasticstatic.
+- **Permission:** read-only Contents. **No expiration.**
+- **Shared with** `drasticstatic/psychedelic-policy-reform-astro`.
+
+The lab's ledger now reads its private work with it rather than the write-capable publishing token.
+
+*To replace it:* make a new read-only token over the same six repositories. Set it as `LEDGER_TOKEN`
+on both repositories (`pbpaste | gh secret set LEDGER_TOKEN -R drasticstatic/<repo>`), and run each
+deploy once.
+
 ### 🗓️ The daily rebuild (10:41 UTC)
 
 `deploy-pages.yml` also runs every day at 10:41 UTC, after ORG's AstroLog (10:17 UTC). It refreshes
