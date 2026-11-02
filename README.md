@@ -67,7 +67,7 @@ explicitly allowlisted, pushed automatically by
 The public repo's ruleset blocks deletion and force-pushes, with an admin bypass the workflows use.
 
 Everything not named in the sync workflow's `public_allowlist` stays private by default, including
-this repo's agent orchestration files (`agent-notes/`, `CLAUDE.md`, `AGENTS.md`,
+this repo's agent orchestration files (an agent-notes folder, `CLAUDE.md`, `AGENTS.md`,
 `.claude/`, `.githooks/`, `scripts/`).
 
 ## 💻 Local Development
