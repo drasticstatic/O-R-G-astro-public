@@ -1,7 +1,7 @@
 ---
 import "../styles/org.css";
 import OctagonMark from "../components/OctagonMark.astro";
-import { url, DAPP, LIVE, DIRECTIONS, ORG_KIT, ORG_LOG, ORG_SITE, LAB } from "../lib/url";
+import { url, DAPP, LIVE, DIRECTIONS, ORG_KIT, ORG_LOG, ORG_SITE, ORG_ROOM, LAB } from "../lib/url";
 
 interface Props {
   title: string;
@@ -47,6 +47,7 @@ const labNav = {
         { id: "astrolog", label: "ORG AstroLog", icon: "door-open", href: ORG_LOG, note: "ORG's official record" },
         { id: "portal", label: "ORG's entry portal", icon: "house-simple", href: ORG_SITE, note: "ORG's front door on GitHub" },
         { id: "home", label: "orgspirituality.org", icon: "globe-hemisphere-west", href: LIVE, note: "The official site, where members decide" },
+        { id: "room", label: "Proposals, procedures & decks", icon: "book-open-text", href: ORG_ROOM, note: "ORG's reading room: what it has chosen to share" },
         { id: "directions", label: "Three directions", icon: "compass-tool", href: DIRECTIONS, note: "Renan T's proposal, kept as history" },
       ],
     },
@@ -79,7 +80,7 @@ const labFooter = {
   label: "The drasticstatic ORG lab, all the ways around",
   groups: [
     { label: "The lab", icon: "flask", items: ["lab", "changelog", "ledger", "map", "dapp"] },
-    { label: "ORG", icon: "polygon", items: ["astrolog", "portal", "home", "directions"] },
+    { label: "ORG", icon: "polygon", items: ["astrolog", "portal", "home", "room", "directions"] },
     { label: "Get involved", icon: "hand-heart", items: ["community", "contact", "donate", { id: "guide", label: "Welcome guide", icon: "signpost", href: "#welcome", open: "guide" }] },
     { label: "About this lab", icon: "wrench", items: ["roadmap", "sustainability", "source", "drasticstatic"] },
   ],
