@@ -16,8 +16,8 @@
   },
   "dependencies": {
     "@astrojs/markdown-satteri": "0.4.1",
-    "astro": "^7.3.8",
-    "satori": "0.18.3",
+    "astro": "^7.4.7",
+    "satori": "0.33.5",
     "sharp": "0.35.5"
   },
   "allowScripts": {
